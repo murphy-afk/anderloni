@@ -1,0 +1,85 @@
+# Quod superest
+
+Testo critico di Alessandra Piolotto, 2009.
+
+Testo originale pubblicato su https://www.anderloni.com/text/00_Quod_superest.htm in spagnolo e in italiano. Riportato qui senza modifiche di merito, solo con le entità HTML decodificate.
+
+Nota per il cliente: verificare se il testo va pubblicato in entrambe le lingue o solo in italiano, e se la grafia "Robert Liliou" va corretta in "Robert Filliou" (l'originale riporta "Liliou" nella versione spagnola e "Filiou" in quella italiana).
+
+## Español
+
+Lo que sobra, lo que permanece... El título de la exposición revela la complejidad y estratificación de significados, como el misterio y la fascinación que puede provocar el hallazgo de un vestigio arqueológico. Es como cruzar un umbral y contemplar, a través de la presencia de un retazo, el sobrante de lo que la vida ha consumido.
+
+Después de una mirada atenta los insectos impregnados de ceniza parecen haber alterado su estado físico asumiendo semejanzas minerales, con el mismo encanto que una escultura se transforma en ruina con el paso del tiempo.
+
+A través de sus obras Guido Anderloni nos lleva a reflexionar sobre la tensión entre lo que está vivo y lo que está muerto, y así cada objeto, cada cuerpo, contiene una energía. Delante de estas imágenes la pregunta que uno se formularía es si existe igualmente una energía en la muerte.
+
+Dos parecen ser los referentes conceptuales para encontrar respuesta.
+
+El primero lo sugiere la física: "nada se crea, nada se destruye, todo se transforma", que parece definir la muerte más bien como una transformación entrópica, con una dirección materialista que consigue, paradójicamente, volverse un consuelo: no somos espectadores del final sino más bien de la evolución.
+
+El segundo se refiere a la ambigüedad lingüística resultante de la acepción dual de "natura morta" en italiano y "still life" (todavía con vida) en inglés. Ambos son términos engañosos, o false friends, como dirían los neófitos de esta lengua, pero sin embargo esta ambigüedad parece ser el punto de encuentro donde se cataliza la atención de Guido Anderloni.
+
+¿Existe la belleza de la muerte? El vértigo que envuelve lo que está desapareciendo, cambiando de estado, como en un lugar surreal y mágico de luz indefinida, donde transita el paso entre noche y día. Este instante ha sido siempre un tema importante de la tradición de la representación y aquí lo encontramos en el estado de gracia de una flor marchita, en sus últimos imperceptibles movimientos.
+
+Las apariencias contienen más mensajes que los que nosotros les dejamos transmitir. Anderloni nos guía con su mirada en una dimensión aparentemente inmóvil, silenciosa. Y nos seduce, nos permite tener respuestas a las preguntas sobre la observación de un mundo animal y vegetal en un continuo flujo entre significado y significante, entre el residuo de la vida y el velo polvoriento de lo inanimado que deja huella atravesando el espacio y el tiempo. Lo que queda son vestigios, fósiles, objetos testimoniales de una trasformación todavía para descubrir.
+
+La muerte hace parte del juego del destino y, en una sociedad como la actual, donde se ignora la prohibición simbólica de su representación, se considera engañosamente necesario poner una censura.
+
+En épocas renacentistas y medievales no se producía una separación rotunda entre la vida y la muerte, por lo que dichas referencias a la muerte no eran, entonces, razón de escándalo. Curiosamente es justamente al convertirse en un tema censurado socialmente cuando muchos autores contemporáneos se han dedicado a ella con enfoques expresivos más o menos manifiestos.
+
+Anderloni utiliza un lenguaje implícito para poner interrogantes sobre la efímera condición del ser, reforzando su intención en la realización de las piezas en las que el artista interviene con una mirada hecha de imágenes reflejas, como si fuéramos nosotros, los espectadores de su obra, el insecto a observar. Con un código visual basado en la reflexión del espejo nos quedan las huellas de estos interrogantes, al mismo modo que la ruina a la arqueología.
+
+Este trabajo oscila entre la mirada y lo no dicho y, adentrándonos en este juego, quedamos seducidos por la precisión del detalle de la imagen, que a veces incluso nos desorienta por su veracidad, ya que se nos presenta como tridimensional, casi presente en la misma dimensión espacio-temporal del observador.
+
+El atractivo de las propias obras consigue, en una época en la cual técnicamente todo parece posible, que nos remitamos conceptualmente a la idea y al trabajo del pintor que ensambla, que crea por partes, divide y une. Así, los insectos y los bodegones en el De rerum natura de Guido Anderloni se muestran sin adornos estéticos pero se conectan con la tradición pictórica del siglo XVII del vanitas. Encontramos una llamada a la reflexión sobre la caducidad de la vida que, por el uso meticuloso de la luz, nos recuerda los frescos y las atmósferas de Tintoretto. Existe también, claro está, una conexión al claroscuro caravaggesco entendido como detalle teatral y perturbador. Así, podríamos descifrar estas fotografías como si fueran retratos, paisajes, o geografías interiores donde se manifestara el peso de una época a través del dramatismo estético.
+
+Él mismo dice que "lo dramático me ayuda a reconsiderar aquellos aspectos más marginales y más efímeros, como el moho, un insecto, la pequeña flor de campo".
+
+Lo suyo es llegar a la ligereza a través del contrario, desestabilizando las reglas de codificación o comprensión de la lectura de una imagen o de un objeto. Es como desacralizar a través de la oficialidad.
+
+Como diría el artista fluxus Robert Liliou: "El arte es lo que convierte la vida en algo más interesante que el arte."
+
+Alessandra Piolotto
+
+## Italiano
+
+Ciò che avanza, ciò che rimane. Il titolo si presenta apertamente con tutta la sua complessità e stratificazione di significati, con il mistero e il fascino del ritrovamento di un reperto archeologico. È la testimonianza dell'attraversamento di una soglia, di un confine, attraverso la presenza di uno scarto, il residuo di ciò che la vita ha consumato.
+
+Gli insetti cosparsi di cenere, osservandoli attentamente, pare convertano il loro stato fisico, assumendo sembianze di minerale, con lo stesso fascino che avvolge una scultura che si trasforma in rovina con il trascorrere del tempo.
+
+Guido Anderloni con le sue nature morte ci conduce a riflettere sulla tensione del limite tra ciò che è vivo e di ciò che è morto. Fisicamente ogni oggetto, ogni corpo contiene un'energia. Di fronte a queste immagini la domanda è se esista ugualmente un'energia nella morte.
+
+Due sembrano essere i riferimenti concettuali utili a trovare una risposta.
+
+Il primo suggerito dalla fisica, quel "nulla si crea, nulla si distrugge, tutto si trasforma", che pare descrivere la morte per lo più come una trasformazione entropica, come una direzione materialistica che riesce quasi ad essere paradossalmente consolatoria: non più fine ma trasformazione.
+
+La seconda riguarda l'ambiguità linguistica riscontrabile nelle accezioni quasi bipolari di "natura morta" in italiano e "Still life" (ancora in vita) in inglese, termini ingannevoli o false friends, come direbbero i neofiti della lingua inglese. Tuttavia proprio questa ambiguità sembra l'ambito in cui si catalizza l'attenzione di Guido Anderloni.
+
+Esiste bellezza della morte? Una vertigine che avvolge ciò che sta svanendo, cambiando stato, come in un surreale e magico luogo dalla luce indefinita, dove accade il passaggio tra la notte e il giorno. Quell'istante sembra caro a tutta la tradizione rappresentativa e qui lo troviamo anche nello stato di grazia di un fiore appassito, nei suoi ultimi impercettibili movimenti.
+
+Valéry diceva che "Gli occhi sono organi che servono a chiedere", a interrogare. A questo proposito lo stesso John Berger giustamente sostenne che "le prime risposte a quelle domande sono state visive e non verbali, precise per quanto inesplicabili, familiari eppure strane", misteriose.
+
+Le apparenze contengono più messaggi di quanti noi stessi lasciamo trasmettere.
+
+Lo sguardo attraverso il quale l'artista Guido Anderloni ci introduce in una dimensione apparentemente immobile, silenziosa, ci seduce, ci permette di avere risposte alle domande poste dall'osservazione di un mondo animale e vegetale, in un continuo passaggio tra significato e significante, tra il residuo della vita e il velo polveroso dell'inanimato, ma che reca tracce di un attraversamento dello spazio e del tempo. Ciò che rimane sono reperti, fossili, testimonianze oggettuali investite di una trasformazione da interrogare.
+
+La morte fa parte del gioco del divenire, e quindi viene ignorato il divieto simbolico della sua raffigurazione che una società come l'attuale ha illusoriamente ritenuto necessario porre come titolo di censura.
+
+Separare nettamente la vita e la morte era modalità sconosciuta alla civiltà rinascimentale e medievale, pertanto la sua esplicitazione non risultava essere motivo di clamore. Proprio perché divenuta tematica di interdizione sociale, molti autori contemporanei si sono dedicati ad essa attraverso la sperimentazione artistica con differenti modalità espressive più o meno esplicite.
+
+Guido Anderloni sembra utilizzare un linguaggio implicito nel porre interrogativi sull'effimera condizione dell'esistenza. Ma a dar forza al suo intento subentra, nella realizzazione, uno sguardo fatto di immagini riflesse, come se noi diventassimo l'insetto che andiamo ad osservare. Con un sistema visivo quasi a specchio ci rimangono le tracce di quegli interrogativi che pongono talvolta le rovine all'archeologia, e in questo caso, le opere a una sorta di paleontologia dell'essere vivente.
+
+È questione di sguardi e il non detto, al quale ci si avvicina, si svela nell'incontro prezioso del dettaglio dell'immagine, che può a tratti disorientare per quanto sia reale, tridimensionale, quasi presente nella stessa dimensione spazio-temporale dell'osservatore.
+
+La fascinazione che ne consegue, in un'epoca in cui tecnicamente tutto è sempre più possibile, ci riconduce concettualmente all'idea e al lavoro del pittore, che assembla, che crea a porzioni, che divide e unisce.
+
+Così gli insetti e le nature morte nel De rerum natura di Guido Anderloni sono senza fronzoli estetici ma rimandano alla tradizione pittorica secentesca della vanitas. Vi si trova un richiamo alla meditazione sulla caducità della vita con un utilizzo meticoloso della luce che ricorda le lumeggiature degli affreschi e le atmosfere del Tintoretto. Vi è inoltre un evidente richiamo caravaggesco nell'uso virtuoso dei chiari e degli scuri, come dettaglio disarmante e conturbante delle forme. Queste fotografie si trasformano così quasi in ritratti, in paesaggi, in geografie interiori, dove si esprime il peso di un'epoca attraverso la drammaticità estetica.
+
+Egli stesso dice che "la drammaticità mi aiuta a riclassificare quelle componenti più marginali, più effimere, come la muffa, l'insetto, il fiorellino di campagna che nessuno noterebbe."
+
+Il suo è un giungere alla leggerezza attraverso il suo contrario, destabilizzando le regole di codifica o comprensione per la lettura di un'immagine o di un oggetto. È quasi un dissacrare attraverso l'ufficialità.
+
+Come direbbe l'artista Fluxus Robert Filiou: "L'arte è ciò che rende la vita più interessante dell'arte."
+
+Alessandra Piolotto
