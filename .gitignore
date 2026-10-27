@@ -14,9 +14,10 @@ build/
 *.log
 npm-debug.log*
 
-# Prisma local artifacts
+# Prisma local artifacts and generated client
 *.db
 *.db-journal
+server/src/generated/
 
 # Caches
 .cache/
