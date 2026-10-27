@@ -16,10 +16,11 @@ Working rules live in `AGENTS.md`. This file tracks execution phases only.
 - Client questions are tracked in `QUESTIONS.md`, which stays open until handover.
 
 ## Session 2: Environment Setup & Architecture Definition
-- [ ] Initialize React frontend application.
-- [ ] Initialize Express backend server.
-- [ ] Configure Prisma ORM with MySQL connection schema.
-- [ ] Setup custom CSS structure (variables, resets, base styles).
+- [x] Initialize React frontend application.
+- [x] Initialize Express backend server.
+- [x] Configure Prisma ORM with MySQL connection schema.
+- [x] Setup custom CSS structure (variables, resets, base styles).
+- Output: `docs/architecture.md`, `README.md`
 
 ## Session 3: Frontend Layout & UI Components (Italian Content)
 - [ ] Build responsive navigation, hero section, services, gallery, and contact components.
