@@ -1,0 +1,92 @@
+/* Design tokens. Values derive from the artwork palette analysed in
+   docs/scrape-analysis.md, section 6. Do not add one off values in
+   component files when a token exists. */
+
+:root {
+  /* Palette */
+  --color-ink: #16180f;
+  --color-bark: #3e3633;
+  --color-sage: #687a6f;
+  --color-sage-light: #79897f;
+  --color-sand: #979580;
+  --color-paper: #f2efe6;
+  --color-bone: #ded8c8;
+  --color-ochre: #b08130;
+  --color-ochre-deep: #7a571f;
+  --color-paper-soft: #fbf9f3;
+
+  /* Text roles */
+  --text-primary: var(--color-ink);
+  --text-secondary: var(--color-bark);
+  --text-muted: #6b625c;
+  --text-inverse: var(--color-paper);
+  --text-inverse-muted: #c8c2b4;
+  --text-link: var(--color-ochre-deep);
+  --text-link-inverse: var(--color-ochre);
+
+  /* Surfaces */
+  --surface-page: var(--color-paper);
+  --surface-panel: var(--color-sand);
+  --surface-section: var(--color-sage-light);
+  --surface-plate: var(--color-ink);
+  --surface-raised: var(--color-paper-soft);
+  --border-hairline: 1px solid var(--color-bone);
+  --border-strong: 1px solid var(--color-sage);
+  --border-inverse: 1px solid #2c2f24;
+
+  /* Focus */
+  --color-focus: var(--color-ochre-deep);
+  --color-focus-inverse: var(--color-ochre);
+
+  /* Typography */
+  --font-display: "Cormorant Garamond", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  --font-text: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);
+  --text-xl: clamp(1.375rem, 1.1rem + 1.2vw, 1.75rem);
+  --text-2xl: clamp(1.75rem, 1.3rem + 2vw, 2.5rem);
+  --text-3xl: clamp(2.25rem, 1.5rem + 3.2vw, 3.5rem);
+  --text-4xl: clamp(2.75rem, 1.6rem + 5vw, 5rem);
+
+  --leading-tight: 1.1;
+  --leading-snug: 1.35;
+  --leading-normal: 1.6;
+
+  --tracking-wide: 0.08em;
+  --tracking-wider: 0.16em;
+
+  /* Spacing */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+
+  /* Layout */
+  --measure: 62ch;
+  --container: 72rem;
+  --container-wide: 88rem;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --header-height: 4.5rem;
+
+  /* Shape and motion */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --shadow-soft: 0 1px 2px rgb(22 24 15 / 8%), 0 8px 24px rgb(22 24 15 / 6%);
+  --duration-fast: 120ms;
+  --duration-base: 220ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Stacking */
+  --z-header: 100;
+  --z-overlay: 200;
+  --z-modal: 300;
+}
