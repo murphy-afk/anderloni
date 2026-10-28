@@ -1,0 +1,49 @@
+/* Enlarge dialog with the image on a dark backdrop. */
+
+.lightbox {
+  width: min(92vw, 72rem);
+  max-width: none;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  overflow: visible;
+}
+
+.lightbox::backdrop {
+  background: rgb(22 24 15 / 94%);
+}
+
+.lightbox__panel {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.lightbox__image {
+  width: auto;
+  max-width: 100%;
+  max-height: 76vh;
+  margin-inline: auto;
+  object-fit: contain;
+}
+
+.lightbox__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.lightbox__close,
+.lightbox__open {
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--text-inverse-muted);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.lightbox__close:hover,
+.lightbox__open:hover {
+  color: var(--text-link-inverse);
+}

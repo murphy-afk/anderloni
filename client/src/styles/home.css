@@ -1,0 +1,56 @@
+/* Home hero plate. */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--surface-plate);
+}
+
+.hero__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgb(22 24 15 / 88%) 0%,
+    rgb(22 24 15 / 45%) 45%,
+    rgb(22 24 15 / 15%) 100%
+  );
+}
+
+.hero__body {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  min-height: clamp(26rem, 76vh, 44rem);
+  padding-block: var(--space-3xl);
+}
+
+.hero__text {
+  --flow-space: var(--space-sm);
+}
+
+.hero__eyebrow {
+  color: var(--text-link-inverse);
+}
+
+.hero__title {
+  color: var(--text-inverse);
+}
+
+.hero__subtitle {
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--text-inverse-muted);
+}

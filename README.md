@@ -31,6 +31,9 @@ The client runs on http://localhost:5173 and proxies `/api` to the server on htt
 | `npm run prisma:generate` | Regenerate Prisma Client |
 | `npm run prisma:migrate` | Create and apply a migration |
 | `npm run prisma:studio` | Open Prisma Studio |
+| `npm run assets` | Copy artwork images into the client with normalised names |
+| `npm run catalog:extract` | Regenerate `docs/catalog-raw.json` from the saved source pages |
+| `npm run catalog` | Regenerate `client/src/data/catalog.js` from `docs/catalog-raw.json` |
 
 ## Documentation
 

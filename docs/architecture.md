@@ -20,11 +20,17 @@ No utility CSS framework, no component library, no CSS in JS. Styling is plain C
 ```text
 anderloni/
   client/                 React application
-    public/               Static files served as is, favicon
+    public/
+      works/              Artwork images, copied by npm run assets
     src/
-      App.jsx             Temporary shell, replaced in Session 3
-      main.jsx            Entry point
+      components/         Layout, header, footer, page header, lightbox
+      data/               Generated catalogue, series config, site copy
+      hooks/              usePageTitle
+      lib/                asset path resolver, catalogue helpers
+      pages/              One file per route
       styles/             Design system, see below
+      App.jsx             Route table
+      main.jsx            Entry point
     index.html            Document shell, Italian metadata
     vite.config.js        Dev server, API proxy, build config
   server/                 Express API
@@ -38,6 +44,7 @@ anderloni/
       app.js              Express app factory
       index.js            Process entry, HTTP listener, shutdown
     prisma.config.ts      Prisma 7 CLI configuration
+  scripts/                Catalogue and asset build steps
   docs/                   Analysis, content model, architecture
   _reference/             Scraped source assets, read only
   ROADMAP.md              Execution phases
@@ -61,6 +68,9 @@ Run from the repository root.
 | `npm run prisma:generate` | Regenerate Prisma Client |
 | `npm run prisma:migrate` | Create and apply a development migration |
 | `npm run prisma:studio` | Open Prisma Studio |
+| `npm run assets` | Copy artwork images into `client/public/works` with normalised names |
+| `npm run catalog:extract` | Regenerate `docs/catalog-raw.json` from the saved source pages |
+| `npm run catalog` | Regenerate `client/src/data/catalog.js` from `docs/catalog-raw.json` |
 
 ## Environment
 
@@ -76,18 +86,25 @@ The contact form needs a mail transport configuration. The destination mailbox i
 
 ## Front end
 
-Routes planned for Session 3:
+Routes built in Session 3:
 
 | Path | Page |
 | --- | --- |
 | `/` | Home |
 | `/artista` | L'artista |
 | `/opere` | Series index |
+| `/opere/:serie` | Single series |
 | `/opere/:serie/:opera` | Single work |
 | `/testi` | Critical texts |
+| `/testi/:testo` | Single text |
 | `/contatti` | Contact |
+| `/note-legali` | Legal notes placeholder |
+| `/privacy` | Privacy placeholder |
+| `*` | 404 |
 
-Routing is client side. GitHub Pages needs a SPA fallback, handled in Session 6 together with the `base` option in `vite.config.js`. The dev server proxies `/api` to `http://localhost:4000`, so the client can call the API with relative paths in both environments.
+Routing is client side with `react-router-dom` 7. GitHub Pages needs a SPA fallback, handled in Session 6 together with the `base` option in `vite.config.js`. The dev server proxies `/api` to `http://localhost:4000`, so the client can call the API with relative paths in both environments.
+
+The legal and privacy pages are placeholders with verifiable data only. They exist so the footer never shows a dead link. Their final text depends on Q29.
 
 ### Styling system
 
@@ -131,6 +148,24 @@ Session 4 adds the business models to `prisma/schema.prisma` and the first migra
 
 Until Session 4, `docs/content-model.md` is the single source of truth and the React components import static data. In Session 4 the same content is seeded into MySQL and served by the API. The shape of the static data should follow the Prisma models, so the swap is a data source change and not a rewrite of the components.
 
+The static catalogue is generated, not handwritten:
+
+```text
+_reference/html/                        saved source pages, latin1 encoded
+  -> npm run catalog:extract            docs/catalog-raw.json, extracted catalogue
+_reference/gallery, _reference/full    scraped image files
+  -> npm run assets                    client/public/works, normalised names
+docs/catalog-raw.json                  extracted catalogue, source of truth
+client/src/data/series-config.js       hand written titles, years, categories
+  -> npm run catalog                   client/src/data/catalog.js
+```
+
+`scripts/extract-catalog-raw.mjs` parses the saved HTML pages. Zoom pages are authoritative for title, year and dimensions; the band caption row is the fallback for works without a zoom page. Captions are matched to thumbnails by cell index so empty spacer cells keep alignment, and a band with no title text continues the preceding series.
+
+`scripts/lib/normalise-name.mjs` holds the one naming rule used by both steps, so a copied file and a generated path always agree. Italian interface copy lives in `client/src/data/site.js`.
+
+Images are served from `client/public/works/` and resolved through `client/src/lib/asset.js`, which prefixes `import.meta.env.BASE_URL` so the same paths work under the GitHub Pages subpath.
+
 ## Deployment path
 
 1. Session 6 builds `client/dist` and publishes it to GitHub Pages as a temporary client preview, with the API replaced by a static adapter or build time data.
@@ -146,3 +181,6 @@ Until Session 4, `docs/content-model.md` is the single source of truth and the R
 | 2026-10-26 | Prisma 7 with MariaDB adapter | Current stable line, no Rust engine binary |
 | 2026-10-26 | Generated Prisma client excluded from git | Regenerable from schema, avoids stale code |
 | 2026-10-26 | Node.js 22.18 or later | Native TypeScript loading for the generated client |
+| 2026-10-27 | react-router-dom 7 for client routing | Nested routes, 404 handling, not a UI library |
+| 2026-10-27 | Generated catalogue data module | 76 works across 17 series derive from the extracted source, no manual lists |
+| 2026-10-27 | Catalogue extracted from saved source pages | Zoom pages carry title, year, dimensions; band captions are the fallback |

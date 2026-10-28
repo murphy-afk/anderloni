@@ -1,3 +1,13 @@
 @import "./variables.css";
 @import "./reset.css";
 @import "./base.css";
+@import "./layout.css";
+@import "./header.css";
+@import "./footer.css";
+@import "./page.css";
+@import "./home.css";
+@import "./series.css";
+@import "./artwork.css";
+@import "./lightbox.css";
+@import "./texts.css";
+@import "./contact.css";

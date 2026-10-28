@@ -1,0 +1,48 @@
+/* Inner page header and artist page. */
+
+.page {
+  --flow-space: var(--space-lg);
+}
+
+.page-header {
+  max-width: var(--measure);
+  padding-bottom: var(--space-xl);
+}
+
+.page-header__title {
+  font-size: var(--text-3xl);
+}
+
+.page-header__intro {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+}
+
+.artist {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: var(--space-3xl);
+  align-items: start;
+}
+
+.artist__body {
+  --flow-space: var(--space-lg);
+}
+
+.artist__paragraph {
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--text-secondary);
+}
+
+.artist__paragraph:first-child {
+  font-size: var(--text-lg);
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .artist {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+}

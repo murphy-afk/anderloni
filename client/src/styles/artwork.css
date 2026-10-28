@@ -1,0 +1,91 @@
+/* Single artwork page: dark plate, exhibition caption, prev and next. */
+
+.artwork {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.artwork__back {
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.artwork__plate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--surface-plate);
+  padding: var(--space-xl) var(--gutter);
+}
+
+.artwork__image {
+  max-height: 74vh;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.artwork__caption {
+  max-width: var(--measure);
+}
+
+.artwork__title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  line-height: var(--leading-snug);
+}
+
+.artwork__year {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+}
+
+.artwork__data {
+  display: grid;
+  gap: var(--space-2xs);
+  margin-top: var(--space-sm);
+}
+
+.artwork__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  margin-top: var(--space-md);
+  font-size: var(--text-sm);
+}
+
+.artwork__action {
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--text-link);
+}
+
+.artwork__row {
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-wide);
+  color: var(--text-muted);
+}
+
+.artwork__row--secondary {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.artwork__nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding-top: var(--space-lg);
+  border-top: var(--border-hairline);
+}
+
+.artwork__nav-link {
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
