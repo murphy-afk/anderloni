@@ -7,4 +7,60 @@ datasource db {
   provider = "mysql"
 }
 
-// Business models are defined in Session 4.
+// Models mirror the client data shapes:
+// client/src/data/catalog.js (series and works),
+// client/src/data/site.js (critical texts),
+// client/src/pages/Contatti.jsx (inquiries).
+
+model Series {
+  id       Int    @id @default(autoincrement())
+  slug     String @unique
+  title    String
+  year     String
+  category String
+  cover    String?
+  position Int    @unique
+  works    Work[]
+
+  @@index([category])
+}
+
+model Work {
+  id                  Int     @id @default(autoincrement())
+  seriesId            Int
+  slug                String
+  title               String?
+  year                String?
+  dimensionsPrimary   String?
+  dimensionsSecondary String?
+  thumb               String?
+  image               String?
+  video               Boolean @default(false)
+  missingSource       Boolean @default(false)
+  position            Int
+  series              Series  @relation(fields: [seriesId], references: [id], onDelete: Cascade)
+
+  @@unique([seriesId, slug])
+  @@index([seriesId, position])
+}
+
+// Critical texts are metadata until the cleaned transcriptions land, see
+// QUESTIONS.md Q17. Languages is Json because MySQL has no scalar lists.
+model CriticalText {
+  id        Int    @id @default(autoincrement())
+  slug      String @unique
+  title     String
+  author    String
+  year      String
+  languages Json
+  position  Int    @unique
+}
+
+// Contact form submissions. Sent once, read by mail duty only.
+model Inquiry {
+  id        Int   @id @default(autoincrement())
+  name      String
+  email     String
+  message   String @db.MediumText
+  createdAt DateTime @default(now())
+}

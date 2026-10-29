@@ -5,8 +5,10 @@ import { PrismaMariaDb } from '@prisma/adapter-mariadb';
 import { env } from '../config/env.js';
 
 // Prisma 7 uses a driver adapter instead of the Rust query engine.
+// The retrieval flag is needed by MySQL 8 caching_sha2_password accounts.
 const adapter = new PrismaMariaDb(env.databaseUrl, {
   connectionLimit: 5,
+  allowPublicKeyRetrieval: true,
 });
 
 export const prisma = new PrismaClient({ adapter });
