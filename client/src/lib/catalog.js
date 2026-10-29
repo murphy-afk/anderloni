@@ -1,9 +1,8 @@
-// Catalogue accessors over the generated data module.
+// Catalogue accessors over a series array, either the API payload or the
+// generated static module.
 
-import { series } from '../data/catalog.js';
-
-export function getSeries(slug) {
-  if (!slug) return null;
+export function getSeries(series, slug) {
+  if (!series || !slug) return null;
   return series.find((item) => item.slug === slug) || null;
 }
 
@@ -12,6 +11,7 @@ export function getWork(item, slug) {
   return item.works.find((work) => work.slug === slug) || null;
 }
 
-export function getCategories() {
+export function getCategories(series) {
+  if (!series) return [];
   return Array.from(new Set(series.map((item) => item.category)));
 }

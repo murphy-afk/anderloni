@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import PageHeader from '../components/PageHeader.jsx';
 import usePageTitle from '../hooks/usePageTitle.js';
+import { postJson } from '../lib/api.js';
 import { contact } from '../data/site.js';
 
 // Contact page: plain page with details and a validated form.
-// The form posts to the Express endpoint built in Session 4.
+// The form posts to the inquiries endpoint of the Express API.
 export default function Contatti() {
   usePageTitle('Contatti, Guido Anderloni');
 
@@ -41,12 +42,16 @@ export default function Contatti() {
 
     setStatus('sending');
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(values),
-      });
-      if (!response.ok) throw new Error('request failed');
+      const { ok, data } = await postJson('/api/inquiries', values);
+      const payload = await data;
+      if (!ok) {
+        // Server side validation, when the field is reported.
+        if (payload?.field) {
+          setErrors((current) => ({ ...current, [payload.field]: payload.error }));
+        }
+        setStatus('failed');
+        return;
+      }
       setStatus('sent');
       setValues({ name: '', email: '', message: '' });
     } catch {

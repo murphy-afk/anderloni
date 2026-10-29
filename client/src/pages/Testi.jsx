@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader.jsx';
 import usePageTitle from '../hooks/usePageTitle.js';
-import { texts, textsIntro } from '../data/site.js';
+import useTexts from '../hooks/useTexts.js';
+import { textsIntro } from '../data/site.js';
 
 // Index of the critical texts.
 export default function Testi() {
   usePageTitle('Testi, Guido Anderloni');
+  const texts = useTexts();
 
   return (
     <div className="page container">

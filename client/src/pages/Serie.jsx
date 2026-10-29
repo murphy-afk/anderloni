@@ -2,13 +2,15 @@ import { Link, useParams } from 'react-router-dom';
 import PageHeader from '../components/PageHeader.jsx';
 import usePageTitle from '../hooks/usePageTitle.js';
 import { asset } from '../lib/asset.js';
+import useCatalog from '../hooks/useCatalog.js';
 import { getSeries } from '../lib/catalog.js';
 import { categoryIntros, micro } from '../data/site.js';
 
 // Works of a single series.
 export default function Serie() {
   const { serie } = useParams();
-  const item = getSeries(serie);
+  const series = useCatalog();
+  const item = getSeries(series, serie);
 
   usePageTitle(item ? `${item.title}, Guido Anderloni` : 'Serie, Guido Anderloni');
 

@@ -122,15 +122,18 @@ Fonts are declared with local fallbacks. Display is an old style serif, text is 
 
 `createApp()` in `server/src/app.js` returns a configured Express app without opening a port, so tests can import it later. `src/index.js` starts the listener and handles `SIGINT` and `SIGTERM`.
 
-Current endpoint:
+Current endpoints:
 
 | Method | Path | Response |
 | --- | --- | --- |
 | GET | `/api/health` | `{ "status": "ok", "service": "anderloni-api", "uptime": 12 }` |
+| GET | `/api/series` | All series with their works, in source order |
+| GET | `/api/series/:slug` | One series with its works, 404 with Italian error |
+| GET | `/api/texts` | Critical text index, languages as an array |
+| GET | `/api/texts/:slug` | One critical text, 404 with Italian error |
+| POST | `/api/inquiries` | Contact form, 201 `{ "status": "ok", "id": 1 }` |
 
-Error contract: every failure returns JSON with an `error` string in Italian, because those messages can surface in the interface.
-
-Unknown routes return 404. Thrown errors return 500 and are logged server side.
+Validation failures return `{ "error": "...", "field": "..." }` with the Italian labels from the content model: `Campo obbligatorio`, `Indirizzo email non valido`. Thrown errors return 500 and are logged server side.
 
 ## Data layer
 
@@ -142,7 +145,14 @@ Prisma 7 differs from Prisma 6 in three ways that shape this setup:
 
 The generated TypeScript client is loaded by the native type stripping built into Node.js 22.18 and later. This is why `engines.node` is set to `>=22.18`. The server source itself stays plain JavaScript.
 
-Session 4 adds the business models to `prisma/schema.prisma` and the first migration to `prisma/migrations`. Migrations are committed. The generated client is not.
+Session 4 added four models, mirroring the client data shapes:
+
+1. `Series`: slug, title, year, category, cover and source position.
+2. `Work`: belongs to a series, dimensions in cm and inches, thumb, image, flags for videos and missing sources. `title` and `year` are nullable because some works are untitled or undated in the source.
+3. `CriticalText`: metadata only until the cleaned transcriptions land, see Q17. `languages` is Json because MySQL has no scalar lists.
+4. `Inquiry`: contact form submissions. A re-seed never deletes them.
+
+Migrations are committed. The generated client is not. `npm run db:seed` reloads the catalogue and texts from `client/src/data`, deleting only series, works and texts.
 
 ## Data flow
 
@@ -158,11 +168,18 @@ _reference/gallery, _reference/full    scraped image files
 docs/catalog-raw.json                  extracted catalogue, source of truth
 client/src/data/series-config.js       hand written titles, years, categories
   -> npm run catalog                   client/src/data/catalog.js
+  -> npm run db:seed                   MySQL, through the Prisma models
 ```
+
+The catalogue also flows into MySQL. `server/src/db/seed.mjs` writes the same records behind the Prisma models of `schema.prisma`, so the generated module and the database always agree.
 
 `scripts/extract-catalog-raw.mjs` parses the saved HTML pages. Zoom pages are authoritative for title, year and dimensions; the band caption row is the fallback for works without a zoom page. Captions are matched to thumbnails by cell index so empty spacer cells keep alignment, and a band with no title text continues the preceding series.
 
 `scripts/lib/normalise-name.mjs` holds the one naming rule used by both steps, so a copied file and a generated path always agree. Italian interface copy lives in `client/src/data/site.js`.
+
+### Client data source
+
+Pages load the catalogue and texts from `useCatalog` and `useTexts`. Both hooks query the API first and fall back to the generated static module when the API is unreachable, so the pages never go blank. When the API answers, the payload replaces the static array, because both come from the same records. The contact form posts to `/api/inquiries` and maps server validation errors onto the form fields.
 
 Images are served from `client/public/works/` and resolved through `client/src/lib/asset.js`, which prefixes `import.meta.env.BASE_URL` so the same paths work under the GitHub Pages subpath.
 
@@ -184,3 +201,5 @@ Images are served from `client/public/works/` and resolved through `client/src/l
 | 2026-10-27 | react-router-dom 7 for client routing | Nested routes, 404 handling, not a UI library |
 | 2026-10-27 | Generated catalogue data module | 76 works across 17 series derive from the extracted source, no manual lists |
 | 2026-10-27 | Catalogue extracted from saved source pages | Zoom pages carry title, year, dimensions; band captions are the fallback |
+| 2026-10-29 | MySQL credentials as separate DB_ variables | Easier to fill in than a single URL, assembled in `config/env.js` |
+| 2026-10-29 | Client queries the API with static fallback | The GitHub Pages preview in Session 6 has no API behind it |

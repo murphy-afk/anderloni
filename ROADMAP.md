@@ -28,9 +28,9 @@ Working rules live in `AGENTS.md`. This file tracks execution phases only.
 - [x] Populate all copy in standard, professional Italian.
 
 ## Session 4: Backend API & Database Schema
-- [ ] Define Prisma schema models reflecting business entities (services, inquiries, content).
-- [ ] Execute migrations using Prisma.
-- [ ] Build Express REST API endpoints to serve data dynamically.
+- [x] Define Prisma schema models reflecting business entities (services, inquiries, content).
+- [x] Execute migrations using Prisma.
+- [x] Build Express REST API endpoints to serve data dynamically.
 
 ## Session 5: SEO Optimization & Metadata
 - [ ] Implement semantic HTML structures across all React components.

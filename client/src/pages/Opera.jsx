@@ -3,13 +3,15 @@ import { Link, useParams } from 'react-router-dom';
 import Lightbox from '../components/Lightbox.jsx';
 import usePageTitle from '../hooks/usePageTitle.js';
 import { asset } from '../lib/asset.js';
+import useCatalog from '../hooks/useCatalog.js';
 import { getSeries, getWork } from '../lib/catalog.js';
 import { micro } from '../data/site.js';
 
 // Single artwork: dark plate, exhibition caption, previous and next control.
 export default function Opera() {
   const { serie, opera } = useParams();
-  const item = getSeries(serie);
+  const series = useCatalog();
+  const item = getSeries(series, serie);
   const work = item ? getWork(item, opera) : null;
   const [enlarged, setEnlarged] = useState(false);
 

@@ -1,12 +1,14 @@
 import { Link, useParams } from 'react-router-dom';
 import PageHeader from '../components/PageHeader.jsx';
 import usePageTitle from '../hooks/usePageTitle.js';
-import { micro, texts } from '../data/site.js';
+import useTexts from '../hooks/useTexts.js';
+import { micro } from '../data/site.js';
 
 // Single critical text. Body copy is rendered once the cleaned transcriptions
 // land, see docs/source-texts and QUESTIONS.md Q17.
 export default function Testo() {
   const { testo } = useParams();
+  const texts = useTexts();
   const text = texts.find((item) => item.slug === testo);
 
   usePageTitle(text ? `${text.title}, Guido Anderloni` : 'Testo, Guido Anderloni');

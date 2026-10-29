@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader.jsx';
 import usePageTitle from '../hooks/usePageTitle.js';
 import { asset } from '../lib/asset.js';
-import { series } from '../data/catalog.js';
+import useCatalog from '../hooks/useCatalog.js';
 import { categoryIntros, micro } from '../data/site.js';
 
 const ALL = 'Tutte';
@@ -11,6 +11,8 @@ const ALL = 'Tutte';
 // Catalogue index: category filters plus series cards.
 export default function Opere() {
   usePageTitle('Opere, Guido Anderloni');
+
+  const series = useCatalog();
 
   const categories = [ALL, ...Array.from(new Set(series.map((item) => item.category)))];
   const [active, setActive] = useState(ALL);
