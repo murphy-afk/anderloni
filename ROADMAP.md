@@ -23,9 +23,9 @@ Working rules live in `AGENTS.md`. This file tracks execution phases only.
 - Output: `docs/architecture.md`, `README.md`
 
 ## Session 3: Frontend Layout & UI Components (Italian Content)
-- [ ] Build responsive navigation, hero section, services, gallery, and contact components.
-- [ ] Apply styling using custom CSS derived from business photo aesthetic.
-- [ ] Populate all copy in standard, professional Italian.
+- [x] Build responsive navigation, hero section, services, gallery, and contact components.
+- [x] Apply styling using custom CSS derived from business photo aesthetic.
+- [x] Populate all copy in standard, professional Italian.
 
 ## Session 4: Backend API & Database Schema
 - [ ] Define Prisma schema models reflecting business entities (services, inquiries, content).
