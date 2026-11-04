@@ -1,3 +1,8 @@
+// Individual works whose source page does not reveal the medium. The content
+// model records 103 africans as one work plus one video, while the zoom page
+// of the second file is a plain image.
+export const workOverrides = [{ zoomPage: 'pag3/103v.htm', video: true }];
+
 // Maps the source order of the three gallery pages to the series records in
 // docs/content-model.md section 6. Kept separate from the generated
 // catalogue, scripts/build-catalog.mjs, so titles, years and categories stay

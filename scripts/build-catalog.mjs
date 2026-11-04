@@ -9,11 +9,13 @@
 // Output:
 //   client/src/data/catalog.js generated data module, reviewed and committed.
 
+import { existsSync } from 'node:fs';
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { normaliseName, slugify } from './lib/normalise-name.mjs';
-import { seriesConfig } from '../client/src/data/series-config.js';
+import { readJpegSize } from './lib/read-jpeg-size.mjs';
+import { seriesConfig, workOverrides } from '../client/src/data/series-config.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const pagesOrder = ['gallery.htm', 'gallery2.htm', 'gallery3.htm'];
@@ -31,89 +33,121 @@ if (extracted.length !== seriesConfig.length) {
   );
 }
 
-function parseDimensions(primary, secondary) {
-  if (!primary) return { primary: null, secondary: secondary || null };
-  const cleaned = primary.replace(/\s+/g, ' ').trim().replace(/\.+$/, '');
+function parseDimensions(primary) {
+  if (!primary) return { primary: null, secondary: null };
 
-  // The source publishes both units, so keep the published imperial value.
-  if (secondary) {
-    return { primary: cleaned, secondary: secondary.replace(/\s+/g, ' ').trim() };
-  }
+  // Content model rule: the x symbol is surrounded by spaces.
+  const cleaned = primary
+    .replace(/\s+/g, ' ')
+    .replace(/(\d)\s*x\s*(\d)/g, '$1 x $2')
+    .replace(/\s*cm\b/i, ' cm')
+    .replace(/\.+$/, '')
+    .trim();
 
+  // The source publishes the imperial line inconsistently, see
+  // QUESTIONS.md Q24, so the small line is computed from centimetres.
+  if (!/\bcm\b/i.test(cleaned)) return { primary: cleaned, secondary: null };
   const match = cleaned.match(
-    /(\d+(?:[.,]\d+)?)\s*x\s*(\d+(?:[.,]\d+)?)(?:\s*x\s*(\d+(?:[.,]\d+)?))?/,
+    /(\d+(?:[.,]\d+)?)(?:\s*x\s*(\d+(?:[.,]\d+)?))?(?:\s*x\s*(\d+(?:[.,]\d+)?))?\s*cm/i,
   );
   if (!match) return { primary: cleaned, secondary: null };
-
-  const isCm = /\bcm\b/i.test(cleaned);
-  const isIn = /\binch|\bin\b|["″]/i.test(cleaned);
-  if (isCm === isIn) return { primary: cleaned, secondary: null };
 
   const values = match
     .slice(1)
     .filter(Boolean)
     .map((value) => Number(value.replace(',', '.')));
-  const convert = isCm ? (value) => Math.round(value / 2.54) : (value) => Math.round(value * 2.54);
-  const targetUnit = isCm ? 'in' : 'cm';
+  const inches = values.map((value) => Number((value / 2.54).toFixed(1)));
 
-  return {
-    primary: cleaned,
-    secondary: `${values.map(convert).join(' x ')} ${targetUnit}`,
-  };
+  return { primary: cleaned, secondary: `${inches.join(' x ')} in` };
 }
 
+// Resolves a source file to the shipped asset path and confirms the copy
+// exists, so a broken reference never reaches the data module.
 function publicPath(relativePath) {
   if (!relativePath) return null;
-  const file = path.basename(relativePath);
-  return `works/${path.basename(path.dirname(relativePath))}/${normaliseName(file)}`;
+  const folder = path.basename(path.dirname(relativePath));
+  const file = normaliseName(path.basename(relativePath));
+  const target = `works/${folder}/${file}`;
+  if (!existsSync(path.join(root, 'client', 'public', target))) {
+    missingFiles.push(target);
+    return null;
+  }
+  return target;
 }
 
-const series = extracted.map((source, position) => {
-  const config = seriesConfig[position];
-  const used = new Set();
+const missingFiles = [];
 
-  const works = source.works.map((rawWork) => {
-    const base =
-      (rawWork.title && slugify(rawWork.title)) ||
-      (rawWork.zoomPage && slugify(path.basename(rawWork.zoomPage, '.htm'))) ||
-      `opera-${rawWork.sourceOrder}`;
-    let slug = base || `opera-${rawWork.sourceOrder}`;
-    let suffix = 2;
-    while (used.has(slug)) {
-      slug = `${base}-${suffix}`;
-      suffix += 1;
-    }
-    used.add(slug);
+// Pixel size of a shipped asset, used to emit width and height attributes
+// that prevent layout shift. Returns nulls when the file is absent.
+async function imageSize(publicFile) {
+  if (!publicFile) return { width: null, height: null };
+  try {
+    return await readJpegSize(path.join(root, 'client', 'public', publicFile));
+  } catch {
+    return { width: null, height: null };
+  }
+}
 
-    const dimensions = parseDimensions(
-      rawWork.dimensionsAsPublished,
-      rawWork.dimensionsSecondaryPublished,
+const series = await Promise.all(
+  extracted.map(async (source, position) => {
+    const config = seriesConfig[position];
+    const used = new Set();
+
+    const works = await Promise.all(
+      source.works.map(async (rawWork) => {
+        const base =
+          (rawWork.title && slugify(rawWork.title)) ||
+          (rawWork.zoomPage && slugify(path.basename(rawWork.zoomPage, '.htm'))) ||
+          `opera-${rawWork.sourceOrder}`;
+        let slug = base || `opera-${rawWork.sourceOrder}`;
+        let suffix = 2;
+        while (used.has(slug)) {
+          slug = `${base}-${suffix}`;
+          suffix += 1;
+        }
+        used.add(slug);
+
+        const dimensions = parseDimensions(rawWork.dimensionsAsPublished);
+
+        const thumb = publicPath(rawWork.galleryThumb);
+        const image = publicPath(rawWork.fullImage);
+        const thumbSize = await imageSize(thumb);
+        const imageSizeValue = await imageSize(image);
+        const override =
+          workOverrides.find((entry) => entry.zoomPage === (rawWork.zoomPage || '')) || null;
+
+        return {
+          slug,
+          title: rawWork.title || null,
+          year: rawWork.year || null,
+          dimensionsPrimary: dimensions.primary,
+          dimensionsSecondary: dimensions.secondary,
+          thumb,
+          thumbWidth: thumbSize.width,
+          thumbHeight: thumbSize.height,
+          image,
+          imageWidth: imageSizeValue.width,
+          imageHeight: imageSizeValue.height,
+          video: Boolean(rawWork.video) || Boolean(override && override.video),
+          missingSource: Boolean(rawWork.missingSource),
+        };
+      }),
     );
 
+    const coverSource = works.find((work) => work.thumb || work.image);
+
     return {
-      slug,
-      title: rawWork.title || null,
-      year: rawWork.year || null,
-      dimensionsPrimary: dimensions.primary,
-      dimensionsSecondary: dimensions.secondary,
-      thumb: publicPath(rawWork.galleryThumb),
-      image: publicPath(rawWork.fullImage),
-      video: Boolean(rawWork.video),
-      missingSource: Boolean(rawWork.missingSource),
+      slug: config.slug,
+      title: config.title,
+      year: config.year,
+      category: config.category,
+      cover: coverSource ? coverSource.thumb || coverSource.image : null,
+      coverWidth: coverSource ? coverSource.thumbWidth || coverSource.imageWidth : null,
+      coverHeight: coverSource ? coverSource.thumbHeight || coverSource.imageHeight : null,
+      works,
     };
-  });
-
-  const coverSource = works.find((work) => work.thumb || work.image);
-
-  return {
-    slug: config.slug,
-    title: config.title,
-    year: config.year,
-    category: config.category,
-    cover: coverSource ? coverSource.thumb || coverSource.image : null,
-    works,
-  };
-});
+  }),
+);
 
 const output = `// Generated by scripts/build-catalog.mjs. Do not edit by hand.
 // Edit docs/catalog-raw.json and client/src/data/series-config.js instead,
@@ -132,3 +166,6 @@ const withoutImage = series.reduce(
 console.log(
   `client/src/data/catalog.js: ${series.length} series, ${workCount} works, ${withoutImage} without a full image`,
 );
+if (missingFiles.length > 0) {
+  console.warn(`Missing shipped assets: ${[...new Set(missingFiles)].join(', ')}`);
+}
