@@ -39,7 +39,7 @@ Working rules live in `AGENTS.md`. This file tracks execution phases only.
 
 ## Session 6: Staging Deployment (GitHub Pages)
 - [x] Configure static export build or mock client-side state adapter for preview testing.
-- [ ] Deploy temporary live preview to GitHub Pages for client presentation.
+- [x] Deploy temporary live preview to GitHub Pages for client presentation.
 
 ## Session 7: Final Client Handover & Production Deployment
 - [ ] Collect client feedback.
