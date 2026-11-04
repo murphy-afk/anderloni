@@ -116,7 +116,7 @@ Load order in `client/src/styles/index.css`:
 
 Tokens are named by role, not by raw colour: `--text-primary`, `--surface-plate`, `--border-hairline`. Component files must use tokens. The palette and type direction come from `docs/scrape-analysis.md`, section 6.
 
-Fonts are declared with local fallbacks. Display is an old style serif, text is a neutral grotesque. Self hosted font files are added in Session 5, where asset weight is part of the performance work.
+Fonts are declared with local fallbacks only. Display is an old style serif, text is a neutral grotesque. No web font files are shipped, so the page makes no font download before text renders.
 
 ## Back end
 
@@ -148,7 +148,7 @@ The generated TypeScript client is loaded by the native type stripping built int
 Session 4 added four models, mirroring the client data shapes:
 
 1. `Series`: slug, title, year, category, cover and source position.
-2. `Work`: belongs to a series, dimensions in cm and inches, thumb, image, flags for videos and missing sources. `title` and `year` are nullable because some works are untitled or undated in the source.
+2. `Work`: belongs to a series, dimensions in cm and inches, pixel size of the thumb and of the full image, thumb, image, flags for videos and missing sources. `title` and `year` are nullable because some works are untitled or undated in the source. The pixel fields carry the real file size, so the client renders width and height attributes without layout shift.
 3. `CriticalText`: metadata only until the cleaned transcriptions land, see Q17. `languages` is Json because MySQL has no scalar lists.
 4. `Inquiry`: contact form submissions. A re-seed never deletes them.
 
@@ -203,3 +203,5 @@ Images are served from `client/public/works/` and resolved through `client/src/l
 | 2026-10-27 | Catalogue extracted from saved source pages | Zoom pages carry title, year, dimensions; band captions are the fallback |
 | 2026-10-29 | MySQL credentials as separate DB_ variables | Easier to fill in than a single URL, assembled in `config/env.js` |
 | 2026-10-29 | Client queries the API with static fallback | The GitHub Pages preview in Session 6 has no API behind it |
+| 2026-11-02 | Route level SEO hook instead of a title only hook | Canonical, description, share tags and JSON-LD change with every route |
+| 2026-11-02 | Image pixel size read at catalogue build time | One JPEG header parser, real width and height in data instead of guessed values |

@@ -33,9 +33,9 @@ Working rules live in `AGENTS.md`. This file tracks execution phases only.
 - [x] Build Express REST API endpoints to serve data dynamically.
 
 ## Session 5: SEO Optimization & Metadata
-- [ ] Implement semantic HTML structures across all React components.
-- [ ] Add OpenGraph, Twitter cards, and structured JSON-LD data in Italian.
-- [ ] Optimize asset loading and performance metrics.
+- [x] Implement semantic HTML structures across all React components.
+- [x] Add OpenGraph, Twitter cards, and structured JSON-LD data in Italian.
+- [x] Optimize asset loading and performance metrics.
 
 ## Session 6: Staging Deployment (GitHub Pages)
 - [ ] Configure static export build or mock client-side state adapter for preview testing.
