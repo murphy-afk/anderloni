@@ -1,13 +1,24 @@
 import { useState } from 'react';
 import PageHeader from '../components/PageHeader.jsx';
-import usePageTitle from '../hooks/usePageTitle.js';
+import useSeo from '../hooks/useSeo.js';
 import { postJson } from '../lib/api.js';
 import { contact } from '../data/site.js';
 
 // Contact page: plain page with details and a validated form.
 // The form posts to the inquiries endpoint of the Express API.
 export default function Contatti() {
-  usePageTitle('Contatti, Guido Anderloni');
+  useSeo({
+    title: 'Contatti, Guido Anderloni',
+    description:
+      'Contatti di Guido Anderloni: email e indirizzo a Invorio (NO). Richieste su opere, mostre e stampa.',
+    path: '/contatti',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'ContactPage',
+      name: 'Contatti, Guido Anderloni',
+      url: 'https://www.anderloni.com/contatti',
+    },
+  });
 
   const [values, setValues] = useState({ name: '', email: '', message: '' });
   const [errors, setErrors] = useState({});

@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import PageHeader from '../components/PageHeader.jsx';
-import usePageTitle from '../hooks/usePageTitle.js';
+import useSeo from '../hooks/useSeo.js';
 import useTexts from '../hooks/useTexts.js';
 import { micro } from '../data/site.js';
 
@@ -11,7 +11,23 @@ export default function Testo() {
   const texts = useTexts();
   const text = texts.find((item) => item.slug === testo);
 
-  usePageTitle(text ? `${text.title}, Guido Anderloni` : 'Testo, Guido Anderloni');
+  useSeo({
+    title: text ? `${text.title}, Guido Anderloni` : 'Testo, Guido Anderloni',
+    description: text
+      ? `${text.title}, di ${text.author}. Testo critico pubblicato sulle opere di Guido Anderloni.`
+      : 'Testo critico di Guido Anderloni.',
+    path: `/testi/${testo}`,
+    jsonLd: text
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: text.title,
+          author: { '@type': 'Person', name: text.author },
+          url: `https://www.anderloni.com/testi/${text.slug}`,
+          inLanguage: text.languages,
+        }
+      : undefined,
+  });
 
   if (!text) {
     return (

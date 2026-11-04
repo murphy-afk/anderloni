@@ -1,9 +1,13 @@
 import { Link } from 'react-router-dom';
-import usePageTitle from '../hooks/usePageTitle.js';
+import useSeo from '../hooks/useSeo.js';
 import { micro } from '../data/site.js';
 
 export default function NotFound() {
-  usePageTitle('Pagina non trovata, Guido Anderloni');
+  useSeo({
+    title: 'Pagina non trovata, Guido Anderloni',
+    description: 'La pagina richiesta non esiste. Torna alla home del sito di Guido Anderloni.',
+    noindex: true,
+  });
 
   return (
     <div className="page container">

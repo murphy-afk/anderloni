@@ -1,12 +1,23 @@
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader.jsx';
-import usePageTitle from '../hooks/usePageTitle.js';
+import useSeo from '../hooks/useSeo.js';
 import useTexts from '../hooks/useTexts.js';
 import { textsIntro } from '../data/site.js';
 
 // Index of the critical texts.
 export default function Testi() {
-  usePageTitle('Testi, Guido Anderloni');
+  useSeo({
+    title: 'Testi, Guido Anderloni',
+    description:
+      "Testi critici e note d'autore pubblicati in occasione delle mostre di Guido Anderloni.",
+    path: '/testi',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: 'Testi, Guido Anderloni',
+      url: 'https://www.anderloni.com/testi',
+    },
+  });
   const texts = useTexts();
 
   return (

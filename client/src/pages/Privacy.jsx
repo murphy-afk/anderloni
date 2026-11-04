@@ -1,10 +1,15 @@
 import PageHeader from '../components/PageHeader.jsx';
-import usePageTitle from '../hooks/usePageTitle.js';
+import useSeo from '../hooks/useSeo.js';
 import { contact } from '../data/site.js';
 
 // Placeholder until the GDPR text arrives, see QUESTIONS.md Q29.
 export default function Privacy() {
-  usePageTitle('Privacy, Guido Anderloni');
+  useSeo({
+    title: 'Privacy, Guido Anderloni',
+    description:
+      'Informativa privacy del sito di Guido Anderloni: trattamento dei dati inviati tramite il modulo di contatto.',
+    path: '/privacy',
+  });
 
   return (
     <div className="page container">

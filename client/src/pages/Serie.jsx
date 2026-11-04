@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import PageHeader from '../components/PageHeader.jsx';
-import usePageTitle from '../hooks/usePageTitle.js';
+import useSeo from '../hooks/useSeo.js';
 import { asset } from '../lib/asset.js';
 import useCatalog from '../hooks/useCatalog.js';
 import { getSeries } from '../lib/catalog.js';
@@ -12,7 +12,22 @@ export default function Serie() {
   const series = useCatalog();
   const item = getSeries(series, serie);
 
-  usePageTitle(item ? `${item.title}, Guido Anderloni` : 'Serie, Guido Anderloni');
+  useSeo({
+    title: item ? `${item.title}, Guido Anderloni` : 'Serie, Guido Anderloni',
+    description: item
+      ? `${item.title} (${item.year}), ${item.category.toLowerCase()}: ${micro.seriesWorks(item.works.length)} di Guido Anderloni.`
+      : 'Serie di opere di Guido Anderloni nel catalogo.',
+    path: `/opere/${serie}`,
+    jsonLd: item
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: `${item.title}, Guido Anderloni`,
+          url: `https://www.anderloni.com/opere/${item.slug}`,
+          numberOfItems: item.works.length,
+        }
+      : undefined,
+  });
 
   if (!item) {
     return <NotFoundSeries />;

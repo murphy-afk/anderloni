@@ -1,10 +1,15 @@
 import PageHeader from '../components/PageHeader.jsx';
-import usePageTitle from '../hooks/usePageTitle.js';
+import useSeo from '../hooks/useSeo.js';
 import { site } from '../data/site.js';
 
 // Placeholder until the legal notes arrive. Only verifiable data is shown.
 export default function NoteLegali() {
-  usePageTitle('Note legali, Guido Anderloni');
+  useSeo({
+    title: 'Note legali, Guido Anderloni',
+    description:
+      'Note legali del sito di Guido Anderloni: responsabile del contenuto, indirizzo e contatti.',
+    path: '/note-legali',
+  });
 
   return (
     <div className="page container">

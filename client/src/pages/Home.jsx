@@ -1,11 +1,26 @@
 import { Link } from 'react-router-dom';
-import usePageTitle from '../hooks/usePageTitle.js';
+import useSeo from '../hooks/useSeo.js';
 import { asset } from '../lib/asset.js';
 import { home } from '../data/site.js';
 
+const HOME_DESCRIPTION =
+  'Opere, mostre e testi critici di Guido Anderloni, pittore. Nature morte, ritratti e installazioni tra memoria, materia e trasformazione.';
+
 // Home: full bleed hero plate, opening text, artist quote, catalogue teaser.
 export default function Home() {
-  usePageTitle('Guido Anderloni, pittura, natura morta e installazioni');
+  useSeo({
+    title: 'Guido Anderloni, pittura, natura morta e installazioni',
+    description: HOME_DESCRIPTION,
+    path: '/',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'Guido Anderloni',
+      url: 'https://www.anderloni.com/',
+      inLanguage: 'it-IT',
+      description: HOME_DESCRIPTION,
+    },
+  });
 
   return (
     <>

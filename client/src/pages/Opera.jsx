@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Lightbox from '../components/Lightbox.jsx';
-import usePageTitle from '../hooks/usePageTitle.js';
+import useSeo from '../hooks/useSeo.js';
 import { asset } from '../lib/asset.js';
 import useCatalog from '../hooks/useCatalog.js';
 import { getSeries, getWork } from '../lib/catalog.js';
@@ -15,9 +15,43 @@ export default function Opera() {
   const work = item ? getWork(item, opera) : null;
   const [enlarged, setEnlarged] = useState(false);
 
-  usePageTitle(
-    work && item ? `${work.title}, ${work.year || item.year}, Guido Anderloni` : 'Opera, Guido Anderloni',
-  );
+  const workTitle = work && item ? work.title || item.title : null;
+  const workYear = work && item ? work.year || item.year : null;
+
+  useSeo({
+    title:
+      work && item ? `${work.title}, ${work.year || item.year}, Guido Anderloni` : 'Opera, Guido Anderloni',
+    description:
+      work && item
+        ? `${workTitle}, ${workYear}, di Guido Anderloni. Scheda dell'opera dalla serie ${item.title}.`
+        : 'Scheda opera di Guido Anderloni.',
+    path: `/opere/${serie}/${opera}`,
+    image:
+      work && work.image && work.imageWidth && work.imageHeight
+        ? {
+            src: work.image,
+            width: work.imageWidth,
+            height: work.imageHeight,
+            alt: `${workTitle}, ${workYear}`,
+          }
+        : undefined,
+    jsonLd:
+      work && item
+        ? {
+            '@context': 'https://schema.org',
+            '@type': 'VisualArtwork',
+            name: workTitle,
+            dateCreated: workYear,
+            url: `https://www.anderloni.com/opere/${item.slug}/${work.slug}`,
+            creator: {
+              '@type': 'Person',
+              name: 'Guido Anderloni',
+              url: 'https://www.anderloni.com/',
+            },
+            artMedium: item.category,
+          }
+        : undefined,
+  });
 
   if (!item || !work) {
     return <NotFoundWork serie={serie} />;

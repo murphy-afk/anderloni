@@ -194,6 +194,7 @@ export const micro = {
   menu: 'Menu',
   closeMenu: 'Chiudi menu',
   imageMissing: 'Immagine non disponibile',
+  lightboxLabel: 'Immagine ingrandita',
   // Interface labels shared by the catalogue pages.
   previousWork: 'Opera precedente',
   nextWork: 'Opera successiva',

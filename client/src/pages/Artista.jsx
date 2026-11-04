@@ -1,10 +1,21 @@
 import PageHeader from '../components/PageHeader.jsx';
-import usePageTitle from '../hooks/usePageTitle.js';
+import useSeo from '../hooks/useSeo.js';
 import { artist } from '../data/site.js';
 
 // L'artista. The paragraphs are provisional, see QUESTIONS.md Q7.
 export default function Artista() {
-  usePageTitle(`L'artista, ${artist.title}`);
+  useSeo({
+    title: `L'artista, ${artist.title}`,
+    description:
+      'Guido Anderloni vive e lavora a Invorio (NO). Pittura, disegno, fotografia, incisione e video, tra natura morta e ritratto.',
+    path: '/artista',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'ProfilePage',
+      name: "L'artista, Guido Anderloni",
+      url: 'https://www.anderloni.com/artista',
+    },
+  });
 
   return (
     <div className="page container">

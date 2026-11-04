@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader.jsx';
-import usePageTitle from '../hooks/usePageTitle.js';
+import useSeo from '../hooks/useSeo.js';
 import { asset } from '../lib/asset.js';
 import useCatalog from '../hooks/useCatalog.js';
 import { categoryIntros, micro } from '../data/site.js';
@@ -10,9 +10,21 @@ const ALL = 'Tutte';
 
 // Catalogue index: category filters plus series cards.
 export default function Opere() {
-  usePageTitle('Opere, Guido Anderloni');
-
   const series = useCatalog();
+
+  useSeo({
+    title: 'Opere, Guido Anderloni',
+    description:
+      'Diciassette serie di Guido Anderloni dal 1994 al 2010: pittura, disegno, fotografia, incisione e video.',
+    path: '/opere',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: 'Opere, Guido Anderloni',
+      url: 'https://www.anderloni.com/opere',
+      numberOfItems: series.length,
+    },
+  });
 
   const categories = [ALL, ...Array.from(new Set(series.map((item) => item.category)))];
   const [active, setActive] = useState(ALL);

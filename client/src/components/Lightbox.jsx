@@ -20,7 +20,7 @@ export default function Lightbox({ src, alt, onClose }) {
   }
 
   return (
-    <dialog className="lightbox" ref={dialogRef} onClose={onClose} onClick={handleBackdrop}>
+    <dialog className="lightbox" ref={dialogRef} onClose={onClose} onClick={handleBackdrop} aria-label={micro.lightboxLabel}>
       <div className="lightbox__panel">
         <img className="lightbox__image" src={src} alt={alt} />
         <div className="lightbox__bar">
