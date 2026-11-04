@@ -12,9 +12,13 @@ import NoteLegali from './pages/NoteLegali.jsx';
 import Privacy from './pages/Privacy.jsx';
 import NotFound from './pages/NotFound.jsx';
 
+// BASE_URL is "/" locally and "/anderloni/" on GitHub Pages, so the same
+// routes resolve in both environments.
+const basename = import.meta.env.BASE_URL.replace(/\/+$/, '');
+
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />

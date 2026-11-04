@@ -65,6 +65,8 @@ Run from the repository root.
 | `npm run dev:server` | Start only Express on port 4000 |
 | `npm run build` | Production build of the client into `client/dist` |
 | `npm run preview` | Serve the production build on port 4173 |
+| `npm run build:pages` | GitHub Pages preview build of the client into `client/dist` |
+| `npm run preview:pages` | Serve the preview build on port 4173 |
 | `npm run prisma:generate` | Regenerate Prisma Client |
 | `npm run prisma:migrate` | Create and apply a development migration |
 | `npm run prisma:studio` | Open Prisma Studio |
@@ -102,7 +104,7 @@ Routes built in Session 3:
 | `/privacy` | Privacy placeholder |
 | `*` | 404 |
 
-Routing is client side with `react-router-dom` 7. GitHub Pages needs a SPA fallback, handled in Session 6 together with the `base` option in `vite.config.js`. The dev server proxies `/api` to `http://localhost:4000`, so the client can call the API with relative paths in both environments.
+Routing is client side with `react-router-dom` 7, with the router basename taken from `import.meta.env.BASE_URL` so the same routes resolve at `/` locally and under `/anderloni/` on GitHub Pages. GitHub Pages has no server rewrites, so the preview build ships a `404.html` that moves unknown paths into the query string and an inline script in `index.html` restores them before the router mounts. The dev server proxies `/api` to `http://localhost:4000`, so the client can call the API with relative paths in both environments.
 
 The legal and privacy pages are placeholders with verifiable data only. They exist so the footer never shows a dead link. Their final text depends on Q29.
 
@@ -179,13 +181,13 @@ The catalogue also flows into MySQL. `server/src/db/seed.mjs` writes the same re
 
 ### Client data source
 
-Pages load the catalogue and texts from `useCatalog` and `useTexts`. Both hooks query the API first and fall back to the generated static module when the API is unreachable, so the pages never go blank. When the API answers, the payload replaces the static array, because both come from the same records. The contact form posts to `/api/inquiries` and maps server validation errors onto the form fields.
+Pages load the catalogue and texts from `useCatalog` and `useTexts`. Both hooks query the API first and fall back to the generated static module when the API is unreachable, so the pages never go blank. In the GitHub Pages preview build the query short circuits to `null`, because `staticPreview` in `lib/api.js` knows there is no API behind the static hosting, and the bundled module is the only source. When the API answers, the payload replaces the static array, because both come from the same records. The contact form posts to `/api/inquiries` and maps server validation errors onto the form fields; in the preview build it validates locally and shows `contact.previewNotice` instead of sending.
 
 Images are served from `client/public/works/` and resolved through `client/src/lib/asset.js`, which prefixes `import.meta.env.BASE_URL` so the same paths work under the GitHub Pages subpath.
 
 ## Deployment path
 
-1. Session 6 builds `client/dist` and publishes it to GitHub Pages as a temporary client preview, with the API replaced by a static adapter or build time data.
+1. Session 6 builds `client/dist` with `npm run build:pages` (`--mode ghpages`) and the workflow in `.github/workflows/deploy-pages.yml` publishes it to GitHub Pages on every push to `main`, with the API replaced by the bundled static data. The preview lives at https://murphy-afk.github.io/anderloni/ and is marked `noindex`.
 2. Session 7 moves the client and the API to the hosting provider chosen by the client. The domain and host are question Q28.
 
 ## Decisions log
@@ -205,3 +207,5 @@ Images are served from `client/public/works/` and resolved through `client/src/l
 | 2026-10-29 | Client queries the API with static fallback | The GitHub Pages preview in Session 6 has no API behind it |
 | 2026-11-02 | Route level SEO hook instead of a title only hook | Canonical, description, share tags and JSON-LD change with every route |
 | 2026-11-02 | Image pixel size read at catalogue build time | One JPEG header parser, real width and height in data instead of guessed values |
+| 2026-11-04 | `ghpages` Vite mode for the preview build | One flag switches the base path, the noindex tag, the 404 fallback and the static API adapter |
+| 2026-11-04 | GitHub Actions workflow deploys Pages on push to main | The staging preview stays current without manual uploads |

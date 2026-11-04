@@ -28,6 +28,8 @@ The client runs on http://localhost:5173 and proxies `/api` to the server on htt
 | `npm run dev` | Client and server together |
 | `npm run build` | Production build in `client/dist` |
 | `npm run preview` | Preview the production build |
+| `npm run build:pages` | GitHub Pages preview build (subpath base, noindex, 404 fallback) |
+| `npm run preview:pages` | Preview the GitHub Pages build locally |
 | `npm run prisma:generate` | Regenerate Prisma Client |
 | `npm run prisma:migrate` | Create and apply a migration |
 | `npm run prisma:studio` | Open Prisma Studio |

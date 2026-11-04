@@ -30,6 +30,10 @@ const defaultImage = {
   alt: 'Natura morta su fondo nero: un insetto coperto di cenere',
 };
 
+// True in the GitHub Pages build: the preview must not be indexed before the
+// real launch, and its absolute URLs follow the preview origin.
+const previewBuild = import.meta.env.MODE === 'ghpages';
+
 export default function useSeo({ title, description, path = '/', jsonLd, image, noindex = false }) {
   // Serialised once so inline object literals do not retrigger the effect
   // on every render.
@@ -41,7 +45,9 @@ export default function useSeo({ title, description, path = '/', jsonLd, image, 
 
     upsertMeta('name', 'description', description);
 
-    const url = `${site.domain}${path === '/' ? '/' : path}`;
+    const origin = previewBuild ? window.location.origin : site.domain;
+    const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+    const url = `${origin}${base}${path}`;
 
     const canonical = document.head.querySelector('link[rel="canonical"]');
     if (noindex) {
@@ -54,7 +60,13 @@ export default function useSeo({ title, description, path = '/', jsonLd, image, 
           Object.assign(document.createElement('link'), { rel: 'canonical' })
         );
       link.setAttribute('href', url);
-      document.head.querySelector('meta[name="robots"]')?.remove();
+      // The staging preview is never indexed, so the robots tag stays in
+      // every preview route instead of being cleared.
+      if (previewBuild) {
+        upsertMeta('name', 'robots', 'noindex, nofollow');
+      } else {
+        document.head.querySelector('meta[name="robots"]')?.remove();
+      }
       upsertMeta('property', 'og:url', url);
     }
 
@@ -64,7 +76,7 @@ export default function useSeo({ title, description, path = '/', jsonLd, image, 
     upsertMeta('name', 'twitter:description', description);
 
     const shareImage = imageKey ? JSON.parse(imageKey) : defaultImage;
-    const imageUrl = `${site.domain}${asset(shareImage.src)}`;
+    const imageUrl = `${origin}${asset(shareImage.src)}`;
     upsertMeta('property', 'og:image', imageUrl);
     upsertMeta('property', 'og:image:width', String(shareImage.width));
     upsertMeta('property', 'og:image:height', String(shareImage.height));

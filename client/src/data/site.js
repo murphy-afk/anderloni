@@ -181,6 +181,8 @@ export const contact = {
   },
   success: 'Messaggio inviato. Grazie, risponderemo al più presto.',
   error: 'Errore di invio. Riprova o scrivi a info@anderloni.com.',
+  previewNotice:
+    "Questa è un'anteprima: il modulo non è attivo. Per scriverci usare l'indirizzo email indicato.",
   required: 'Campo obbligatorio',
   invalidEmail: 'Indirizzo email non valido',
   privacyNote: 'I dati inviati vengono utilizzati esclusivamente per rispondere alla richiesta.',

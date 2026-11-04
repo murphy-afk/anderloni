@@ -87,6 +87,11 @@
   color: var(--text-primary);
 }
 
+.form__status--info {
+  background-color: var(--surface-section);
+  color: var(--text-secondary);
+}
+
 @media (max-width: 768px) {
   .contact {
     grid-template-columns: 1fr;

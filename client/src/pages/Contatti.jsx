@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import PageHeader from '../components/PageHeader.jsx';
 import useSeo from '../hooks/useSeo.js';
-import { postJson } from '../lib/api.js';
+import { postJson, staticPreview } from '../lib/api.js';
 import { contact } from '../data/site.js';
 
 // Contact page: plain page with details and a validated form.
-// The form posts to the inquiries endpoint of the Express API.
+// The form posts to the inquiries endpoint of the Express API, which the
+// GitHub Pages preview does not have: there the form validates and then
+// shows the preview notice instead of sending.
 export default function Contatti() {
   useSeo({
     title: 'Contatti, Guido Anderloni',
@@ -48,6 +50,11 @@ export default function Contatti() {
     setErrors(next);
     if (Object.keys(next).length > 0) {
       setStatus('idle');
+      return;
+    }
+
+    if (staticPreview) {
+      setStatus('preview');
       return;
     }
 
@@ -171,6 +178,11 @@ export default function Contatti() {
           {status === 'failed' ? (
             <p className="form__status form__status--error" role="status">
               {contact.error}
+            </p>
+          ) : null}
+          {status === 'preview' ? (
+            <p className="form__status form__status--info" role="status">
+              {contact.previewNotice}
             </p>
           ) : null}
         </form>

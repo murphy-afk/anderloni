@@ -2,7 +2,12 @@
 // can fall back to the bundled static data, which keeps the GitHub Pages
 // preview working without the API.
 
+// True in the GitHub Pages build, which ships without the API: requests are
+// skipped entirely and the static modules are the only data source.
+export const staticPreview = import.meta.env.MODE === 'ghpages';
+
 export async function getJson(path) {
+  if (staticPreview) return null;
   try {
     const response = await fetch(path, { headers: { Accept: 'application/json' } });
     if (!response.ok) return null;
