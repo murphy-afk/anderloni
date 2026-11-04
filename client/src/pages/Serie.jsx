@@ -45,8 +45,9 @@ export default function Serie() {
                   src={asset(work.thumb || work.image)}
                   alt={work.title ? `${work.title}, ${work.year || item.year}` : `Serie ${item.title}`}
                   loading="lazy"
-                  width={480}
-                  height={480} />
+                  {...(work.thumb && work.thumbWidth && work.thumbHeight
+                    ? { width: work.thumbWidth, height: work.thumbHeight }
+                    : {})} />
               </span>
               <span className="work-card__title">{work.title || item.title}</span>
               <span className="work-card__year">{work.video ? 'Video' : work.year || item.year}</span>

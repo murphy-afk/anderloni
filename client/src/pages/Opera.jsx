@@ -41,8 +41,9 @@ export default function Opera() {
             className="artwork__image"
             src={asset(work.image)}
             alt={`${title}, ${year}`}
-            width={1200}
-            height={900} />
+            {...(work.imageWidth && work.imageHeight
+              ? { width: work.imageWidth, height: work.imageHeight }
+              : {})} />
         ) : (
           <p className="artwork__row">{micro.imageMissing}</p>
         )}

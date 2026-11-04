@@ -14,8 +14,8 @@ export default function Home() {
           className="hero__image"
           src={asset(home.heroImage)}
           alt={home.heroAlt}
-          width={1600}
-          height={900}
+          width={800}
+          height={612}
           fetchPriority="high" />
         <div className="hero__body container container--wide">
           <div className="hero__text flow">

@@ -56,8 +56,9 @@ export default function Opere() {
                     src={asset(item.cover)}
                     alt={`${item.title}, ${item.year}`}
                     loading="lazy"
-                    width={640}
-                    height={480} />
+                    {...(item.coverWidth && item.coverHeight
+                      ? { width: item.coverWidth, height: item.coverHeight }
+                      : {})} />
                 </span>
                 <span className="series-card__title">{item.title}</span>
                 <span className="series-card__meta">
