@@ -34,7 +34,11 @@ model Work {
   dimensionsPrimary   String?
   dimensionsSecondary String?
   thumb               String?
+  thumbWidth          Int?
+  thumbHeight         Int?
   image               String?
+  imageWidth          Int?
+  imageHeight         Int?
   video               Boolean @default(false)
   missingSource       Boolean @default(false)
   position            Int
