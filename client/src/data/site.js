@@ -27,9 +27,11 @@ export const home = {
   eyebrow: 'Pittore',
   title: 'Guido Anderloni',
   subtitle: 'Opere 1994 - 2010',
-  // Hero image: a dark ground still life, full width.
-  heroImage: '/works/full/images_____06_10_cen002.jpg',
-  heroAlt: 'Natura morta su fondo nero: un insetto coperto di cenere',
+  // Hero image: an installation view of the exhibition, full width. It is
+  // the largest landscape file on the source site (1000x686), which keeps
+  // the full bleed hero as sharp as the available material allows.
+  heroImage: '/works/full/images_____dab_gen_view_dab02.jpg',
+  heroAlt: "Vista dell'allestimento in galleria: le opere esposte sulle pareti",
   lead:
     "Il lavoro di Guido Anderloni si muove sul confine tra ciò che è vivo e ciò che è morto. Nature morte, insetti, fiori appassiti e oggetti domestici diventano il pretesto per un'indagine paziente sulla trasformazione della materia.",
   second:
