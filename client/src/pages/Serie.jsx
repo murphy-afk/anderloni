@@ -57,12 +57,14 @@ export default function Serie() {
               <span className="work-card__plate">
                 <img
                   className="work-card__image"
-                  src={asset(work.thumb || work.image)}
+                  src={asset(work.image || work.thumb)}
                   alt={work.title ? `${work.title}, ${work.year || item.year}` : `Serie ${item.title}`}
                   loading="lazy"
-                  {...(work.thumb && work.thumbWidth && work.thumbHeight
-                    ? { width: work.thumbWidth, height: work.thumbHeight }
-                    : {})} />
+                  {...(work.image && work.imageWidth && work.imageHeight
+                    ? { width: work.imageWidth, height: work.imageHeight }
+                    : work.thumb && work.thumbWidth && work.thumbHeight
+                      ? { width: work.thumbWidth, height: work.thumbHeight }
+                      : {})} />
               </span>
               <span className="work-card__title">{work.title || item.title}</span>
               <span className="work-card__year">{work.video ? 'Video' : work.year || item.year}</span>

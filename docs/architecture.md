@@ -209,3 +209,4 @@ Images are served from `client/public/works/` and resolved through `client/src/l
 | 2026-11-02 | Image pixel size read at catalogue build time | One JPEG header parser, real width and height in data instead of guessed values |
 | 2026-11-04 | `ghpages` Vite mode for the preview build | One flag switches the base path, the noindex tag, the 404 fallback and the static API adapter |
 | 2026-11-04 | GitHub Actions workflow deploys Pages on push to main | The staging preview stays current without manual uploads |
+| 2026-11-05 | Cards use full size images, thumbs only as fallback | The 140 px gallery thumbs looked soft stretched to card width; full images are only about 46 KB each |

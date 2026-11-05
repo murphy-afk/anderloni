@@ -134,16 +134,19 @@ const series = await Promise.all(
       }),
     );
 
-    const coverSource = works.find((work) => work.thumb || work.image);
+    // Cards show the full size image whenever the work has one: the gallery
+    // thumbs are about 140 px wide and look soft once stretched to the card
+    // width. The 11 video and missing-source works keep their thumb.
+    const coverSource = works.find((work) => work.image) || works.find((work) => work.thumb);
 
     return {
       slug: config.slug,
       title: config.title,
       year: config.year,
       category: config.category,
-      cover: coverSource ? coverSource.thumb || coverSource.image : null,
-      coverWidth: coverSource ? coverSource.thumbWidth || coverSource.imageWidth : null,
-      coverHeight: coverSource ? coverSource.thumbHeight || coverSource.imageHeight : null,
+      cover: coverSource ? coverSource.image || coverSource.thumb : null,
+      coverWidth: coverSource ? coverSource.imageWidth || coverSource.thumbWidth : null,
+      coverHeight: coverSource ? coverSource.imageHeight || coverSource.thumbHeight : null,
       works,
     };
   }),

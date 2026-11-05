@@ -8,9 +8,9 @@ export const series = [
     "title": "Quod superest",
     "year": "2009",
     "category": "Natura morta",
-    "cover": "works/gallery/images_____06_10_cen012sm.jpg",
-    "coverWidth": 140,
-    "coverHeight": 107,
+    "cover": "works/full/images_____06_10_cen012.jpg",
+    "coverWidth": 800,
+    "coverHeight": 612,
     "works": [
       {
         "slug": "06-10-cen012",
@@ -124,9 +124,9 @@ export const series = [
     "title": "Preliminary study",
     "year": "2006",
     "category": "Pittura",
-    "cover": "works/gallery/images__03_1_ins02_sm.jpg",
-    "coverWidth": 180,
-    "coverHeight": 180,
+    "cover": "works/full/images__03_1_ins02.jpg",
+    "coverWidth": 800,
+    "coverHeight": 800,
     "works": [
       {
         "slug": "preliminary-study",
@@ -210,9 +210,9 @@ export const series = [
     "title": "Senza titolo",
     "year": "2008",
     "category": "Natura morta",
-    "cover": "works/gallery/images__02_1_coc002_sm.jpg",
-    "coverWidth": 150,
-    "coverHeight": 180,
+    "cover": "works/full/images__02_1_coc002.jpg",
+    "coverWidth": 600,
+    "coverHeight": 720,
     "works": [
       {
         "slug": "untitled",
@@ -281,9 +281,9 @@ export const series = [
     "title": "Natura morta",
     "year": "2006 - 2010",
     "category": "Natura morta",
-    "cover": "works/gallery/images__01_1_flo003_sm.jpg",
-    "coverWidth": 135,
-    "coverHeight": 180,
+    "cover": "works/full/images__01_1_flo003.jpg",
+    "coverWidth": 600,
+    "coverHeight": 800,
     "works": [
       {
         "slug": "still-life",
@@ -382,9 +382,9 @@ export const series = [
     "title": "Senza titolo",
     "year": "2006 - 2007",
     "category": "Natura morta",
-    "cover": "works/gallery/images__02_4_bod001_sm.jpg",
-    "coverWidth": 180,
-    "coverHeight": 132,
+    "cover": "works/full/images__02_4_bod001.jpg",
+    "coverWidth": 800,
+    "coverHeight": 588,
     "works": [
       {
         "slug": "untitled",
@@ -438,9 +438,9 @@ export const series = [
     "title": "Disegni e altri lavori",
     "year": "2005",
     "category": "Disegno",
-    "cover": "works/gallery/images__07_1_4inscoll_sm.jpg",
-    "coverWidth": 180,
-    "coverHeight": 132,
+    "cover": "works/full/images__07_1_4inscoll.jpg",
+    "coverWidth": 800,
+    "coverHeight": 588,
     "works": [
       {
         "slug": "communication",
@@ -595,9 +595,9 @@ export const series = [
     "title": "Incisione fotografica",
     "year": "2004",
     "category": "Incisione",
-    "cover": "works/gallery/pag2__05_1_fograb01_sm.jpg",
-    "coverWidth": 180,
-    "coverHeight": 149,
+    "cover": "works/full/pag2__05_1_fograb01.jpg",
+    "coverWidth": 724,
+    "coverHeight": 600,
     "works": [
       {
         "slug": "untitled",
@@ -651,9 +651,9 @@ export const series = [
     "title": "After Man Ray",
     "year": "2000",
     "category": "Fotografia",
-    "cover": "works/gallery/pag2__06_bn2_sm.jpg",
-    "coverWidth": 131,
-    "coverHeight": 180,
+    "cover": "works/full/pag2__06_bn2.jpg",
+    "coverWidth": 325,
+    "coverHeight": 446,
     "works": [
       {
         "slug": "after-man-ray",
@@ -778,9 +778,9 @@ export const series = [
     "title": "Ritratti",
     "year": "2001",
     "category": "Ritratto",
-    "cover": "works/gallery/pag3____ent001_sm.jpg",
-    "coverWidth": 113,
-    "coverHeight": 180,
+    "cover": "works/full/pag3____ent001.jpg",
+    "coverWidth": 313,
+    "coverHeight": 500,
     "works": [
       {
         "slug": "portrait",
@@ -864,9 +864,9 @@ export const series = [
     "title": "103 africans",
     "year": "1997",
     "category": "Pittura",
-    "cover": "works/gallery/pag3____103_sm.jpg",
-    "coverWidth": 137,
-    "coverHeight": 180,
+    "cover": "works/full/pag3____103.jpg",
+    "coverWidth": 456,
+    "coverHeight": 600,
     "works": [
       {
         "slug": "103-africans",
@@ -905,9 +905,9 @@ export const series = [
     "title": "Dettagli personali",
     "year": "1996",
     "category": "Ritratto",
-    "cover": "works/gallery/pag3___03_pd_view_sm.jpg",
-    "coverWidth": 200,
-    "coverHeight": 132,
+    "cover": "works/full/pag3___03_pd_view.jpg",
+    "coverWidth": 650,
+    "coverHeight": 427,
     "works": [
       {
         "slug": "pdview",
@@ -991,9 +991,9 @@ export const series = [
     "title": "Il sole nell'hangar",
     "year": "1998",
     "category": "Installazione",
-    "cover": "works/gallery/pag3____gfer_sm.jpg",
-    "coverWidth": 180,
-    "coverHeight": 143,
+    "cover": "works/full/pag3____gfer.jpg",
+    "coverWidth": 628,
+    "coverHeight": 500,
     "works": [
       {
         "slug": "the-sun-in-the-hangar",
@@ -1062,9 +1062,9 @@ export const series = [
     "title": "Ritratti",
     "year": "1994 e 2004",
     "category": "Ritratto",
-    "cover": "works/gallery/pag3____silla452x590_sm.jpg",
-    "coverWidth": 138,
-    "coverHeight": 180,
+    "cover": "works/full/pag3____silla452x590.jpg",
+    "coverWidth": 452,
+    "coverHeight": 590,
     "works": [
       {
         "slug": "portrait",
@@ -1223,9 +1223,9 @@ export const series = [
     "title": "Interni",
     "year": "1998",
     "category": "Pittura",
-    "cover": "works/gallery/pag3____int1_sm.jpg",
-    "coverWidth": 138,
-    "coverHeight": 180,
+    "cover": "works/full/pag3____int1.jpg",
+    "coverWidth": 360,
+    "coverHeight": 468,
     "works": [
       {
         "slug": "interior",
@@ -1294,9 +1294,9 @@ export const series = [
     "title": "Il colore della luce",
     "year": "1998",
     "category": "Pittura",
-    "cover": "works/gallery/pag3____colorlig2_sm.jpg",
-    "coverWidth": 180,
-    "coverHeight": 46,
+    "cover": "works/full/pag3____colorlig2.jpg",
+    "coverWidth": 652,
+    "coverHeight": 167,
     "works": [
       {
         "slug": "the-color-of-the-light",
