@@ -34,10 +34,10 @@ export default function Home() {
           fetchPriority="high" />
         <div className="hero__body container container--wide">
           <div className="hero__text flow">
-            <p className="eyebrow hero__eyebrow">{home.eyebrow}</p>
             <h1 id="titolo-hero" className="hero__title">
               {home.title}
             </h1>
+            <p className="eyebrow hero__eyebrow">{home.eyebrow}</p>
             <p className="hero__subtitle">{home.subtitle}</p>
           </div>
         </div>
