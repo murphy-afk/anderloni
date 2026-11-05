@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader.jsx';
-import BrowseAll from '../components/BrowseAll.jsx';
 import useSeo from '../hooks/useSeo.js';
 import { asset } from '../lib/asset.js';
 import useCatalog from '../hooks/useCatalog.js';
@@ -16,7 +15,7 @@ const BAND_PREVIEW = 6;
 // order. Counts are series counts, the summary line states the total of
 // works, so the page cannot be read as if the catalogue held only seventeen
 // works. Each band opens the series page, which holds the full grid and the
-// critical text.
+// critical text. The browse dialog lives on the Quick tour page.
 export default function Opere() {
   const series = useCatalog();
   const totalWorks = series.reduce((sum, item) => sum + item.works.length, 0);
@@ -37,16 +36,8 @@ export default function Opere() {
 
   const categories = [ALL, ...Array.from(new Set(series.map((item) => item.category)))];
   const [active, setActive] = useState(ALL);
-  const [browsing, setBrowsing] = useState(false);
   const visible = active === ALL ? series : series.filter((item) => item.category === active);
   const intro = active === ALL ? null : categoryIntros[active];
-  // Whole catalogue in source order for the browse dialog, works without any
-  // downloadable image are skipped.
-  const browseEntries = series.flatMap((item) =>
-    item.works
-      .filter((work) => work.image || work.thumb)
-      .map((work) => ({ series: item, work }))
-  );
 
   return (
     <div className="page container">
@@ -76,12 +67,6 @@ export default function Opere() {
       </div>
 
       {intro ? <p className="series-note">{intro}</p> : null}
-
-      <div className="catalog-actions">
-        <button className="button" type="button" onClick={() => setBrowsing(true)}>
-          {micro.browseAll}
-        </button>
-      </div>
 
       {visible.length === 0 ? (
         <p className="series-empty">{micro.empty}</p>
@@ -140,10 +125,6 @@ export default function Opere() {
           })}
         </div>
       )}
-
-      {browsing && browseEntries.length > 0 ? (
-        <BrowseAll entries={browseEntries} index={0} onClose={() => setBrowsing(false)} />
-      ) : null}
     </div>
   );
 }

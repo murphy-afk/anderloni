@@ -154,6 +154,10 @@
 }
 
 .catalog-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-lg);
   padding-bottom: var(--space-xl);
 }
 

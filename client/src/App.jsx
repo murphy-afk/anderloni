@@ -1,11 +1,11 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout.jsx';
 import Home from './pages/Home.jsx';
 import Artista from './pages/Artista.jsx';
 import Opere from './pages/Opere.jsx';
 import Serie from './pages/Serie.jsx';
 import Opera from './pages/Opera.jsx';
-import Testi from './pages/Testi.jsx';
+import Quicktour from './pages/Quicktour.jsx';
 import Testo from './pages/Testo.jsx';
 import Contatti from './pages/Contatti.jsx';
 import NoteLegali from './pages/NoteLegali.jsx';
@@ -26,7 +26,10 @@ export default function App() {
           <Route path="/opere" element={<Opere />} />
           <Route path="/opere/:serie" element={<Serie />} />
           <Route path="/opere/:serie/:opera" element={<Opera />} />
-          <Route path="/testi" element={<Testi />} />
+          <Route path="/quicktour" element={<Quicktour />} />
+          {/* The texts index is gone: texts live on their series pages now,
+              the old URLs move to the catalogue. */}
+          <Route path="/testi" element={<Navigate to="/opere" replace />} />
           <Route path="/testi/:testo" element={<Testo />} />
           <Route path="/contatti" element={<Contatti />} />
           <Route path="/note-legali" element={<NoteLegali />} />

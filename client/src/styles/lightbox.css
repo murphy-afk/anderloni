@@ -1,8 +1,14 @@
 /* Enlarge dialog with the image on a dark backdrop. */
 
 .lightbox {
+  /* Explicit both axis centering: the dialog box itself must land dead
+     center of the viewport, whatever the user agent does by default. */
+  position: fixed;
+  inset: 0;
+  margin: auto;
   width: min(92vw, 72rem);
   max-width: none;
+  max-height: 100vh;
   padding: 0;
   border: 0;
   background: transparent;
@@ -18,12 +24,73 @@
   gap: var(--space-sm);
 }
 
+/* The stage shrink wraps the image and keeps a reserve on both sides, so
+   the arrows sit outside the picture instead of covering it. */
+.lightbox__stage {
+  position: relative;
+  width: fit-content;
+  max-width: calc(100% - 2 * (var(--space-2xl) + var(--space-sm)));
+  margin-inline: auto;
+}
+
 .lightbox__image {
+  display: block;
   width: auto;
   max-width: 100%;
-  max-height: 76vh;
+  /* Leaves room for the caption and the bar, so the controls next to the
+     image never fall below the fold. */
+  max-height: calc(100vh - 12rem);
   margin-inline: auto;
   object-fit: contain;
+}
+
+/* Arrows sit outside the image, one gap away from its edges: they never
+   cover the picture. Arrow keys do the same in the dialogs. */
+.lightbox__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: var(--space-2xl);
+  height: var(--space-2xl);
+  font-size: var(--text-xl);
+  line-height: 1;
+  color: var(--text-inverse);
+  text-decoration: none;
+  background-color: rgb(22 24 15 / 55%);
+  border-radius: 50%;
+  transition:
+    background-color var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out);
+}
+
+.lightbox__nav:first-child {
+  right: calc(100% + var(--space-sm));
+  left: auto;
+}
+
+.lightbox__nav:last-child {
+  left: calc(100% + var(--space-sm));
+  right: auto;
+}
+
+.lightbox__nav:hover {
+  background-color: rgb(22 24 15 / 85%);
+  color: var(--text-link-inverse);
+}
+
+/* Phones: no arrows over the pictures, the swipe handlers step through the
+   works and the pages keep their text navigation. */
+@media (max-width: 768px) {
+  .lightbox__nav {
+    display: none;
+  }
+
+  .lightbox__stage {
+    max-width: 100%;
+  }
 }
 
 .lightbox__bar {
@@ -69,22 +136,4 @@
   text-transform: uppercase;
   color: var(--text-inverse-muted);
   white-space: nowrap;
-}
-
-.browse__nav {
-  font-size: var(--text-xs);
-  letter-spacing: var(--tracking-wide);
-  text-transform: uppercase;
-  color: var(--text-inverse-muted);
-  transition: color var(--duration-fast) var(--ease-out);
-}
-
-.browse__nav:hover {
-  color: var(--text-link-inverse);
-}
-
-.browse__tools {
-  display: flex;
-  align-items: center;
-  gap: var(--space-md);
 }

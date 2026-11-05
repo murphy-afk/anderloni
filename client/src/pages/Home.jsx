@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import useSeo from '../hooks/useSeo.js';
 import { asset } from '../lib/asset.js';
-import { home } from '../data/site.js';
+import { home, micro } from '../data/site.js';
 
 const HOME_DESCRIPTION =
   'Opere, mostre e testi critici di Guido Anderloni, pittore. Nature morte, ritratti e installazioni tra memoria, materia e trasformazione.';
@@ -70,6 +70,11 @@ export default function Home() {
           <p>
             <Link className="link-arrow" to={home.feature.to}>
               {home.feature.action}
+            </Link>
+          </p>
+          <p>
+            <Link className="link-arrow" to="/quicktour">
+              {micro.browseAll}
             </Link>
           </p>
         </div>

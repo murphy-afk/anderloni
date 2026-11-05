@@ -38,9 +38,9 @@ export default function Testo() {
   if (!text) {
     return (
       <div className="page container">
-        <PageHeader eyebrow="Testi" title={micro.notFound} />
+        <PageHeader eyebrow="Testo" title={micro.notFound} />
         <p>
-          <Link to="/testi">Torna all'elenco dei testi</Link>
+          <Link to="/opere">Torna al catalogo</Link>
         </p>
       </div>
     );
@@ -106,7 +106,13 @@ export default function Testo() {
         </div>
 
         <p className="text__back">
-          <Link to="/testi">Torna all'elenco dei testi</Link>
+          {linkedSeries.length > 0 ? (
+            <Link to={`/opere/${linkedSeries[0].slug}`}>
+              ← {micro.backToSeries}: {linkedSeries[0].title}
+            </Link>
+          ) : (
+            <Link to="/opere">Torna al catalogo</Link>
+          )}
         </p>
       </article>
     </div>

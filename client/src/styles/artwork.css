@@ -20,7 +20,17 @@
   padding: var(--space-xl) var(--gutter);
 }
 
+/* Shrink wraps the image and keeps a reserve on both sides, so the prev and
+   next arrows sit next to the picture without covering it. */
+.artwork__stage {
+  position: relative;
+  width: fit-content;
+  max-width: calc(100% - 2 * (var(--space-2xl) + var(--space-sm)));
+  margin-inline: auto;
+}
+
 .artwork__image {
+  display: block;
   max-height: 74vh;
   width: auto;
   max-width: 100%;
@@ -74,18 +84,27 @@
   color: var(--text-muted);
 }
 
+/* Phones only: the arrows over the image are hidden there, so the labelled
+   previous and next links return under the picture, where a thumb scroll
+   reaches them. */
 .artwork__nav {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-md);
-  padding-top: var(--space-lg);
-  border-top: var(--border-hairline);
+  display: none;
 }
 
-.artwork__nav-link {
-  font-size: var(--text-sm);
-  letter-spacing: var(--tracking-wide);
-  text-transform: uppercase;
+@media (max-width: 768px) {
+  .artwork__nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    padding-top: var(--space-lg);
+    border-top: var(--border-hairline);
+  }
+
+  .artwork__nav-link {
+    font-size: var(--text-sm);
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+  }
 }

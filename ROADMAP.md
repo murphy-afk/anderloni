@@ -46,12 +46,14 @@ Working rules live in `AGENTS.md`. This file tracks execution phases only.
 - [ ] Migrate from temporary staging setup to final target hosting server based on client choice.
 
 ## Session 8: Content restructure (texts, series, gallery)
-- [x] Tie each critical text to the series that published it, on the series, testi and text pages.
+- [x] Tie each critical text to the series that published it, on the series and text pages.
 - [x] Transcribe the nine text bodies from the saved source pages into `docs/source-texts/` and `client/src/data/texts/`.
 - [x] Correct text metadata (authors, years, languages) against the transcriptions.
 - [x] State catalogue totals on the index (17 series, 76 works) and label filter counts as series.
 - [x] Rebuild the index as one band per series: title on top, single row of up to six previews, no wrapping, opening the series page.
-- [x] Add the browse-all dialog: whole catalogue in series order with captions.
+- [x] Remove the texts index, keep the text pages under their series, redirect `/testi` to `/opere`.
+- [x] Move the browse dialog to a Quick tour page opened from the Home "Sfoglia tutte le opere" button, replacing Testi in the navigation.
+- [x] Put the prev and next arrows on the sides of the full screen image, in both the quick tour and the artwork lightbox.
 - [ ] Confirm transcription questions with the client (`QUESTIONS.md` Q17 to Q21, Q36 to Q39).
 
 ## Deployment Strategy

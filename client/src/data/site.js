@@ -14,7 +14,7 @@ export const navigation = [
   { label: 'Home', to: '/' },
   { label: "L'artista", to: '/artista' },
   { label: 'Opere', to: '/opere' },
-  { label: 'Testi', to: '/testi' },
+  { label: 'Quick tour', to: '/quicktour' },
   { label: 'Contatti', to: '/contatti' },
 ];
 
@@ -91,6 +91,13 @@ export const categoryIntros = {
 
 // Critical texts index moved to data/texts.js, together with the body copy
 // and the link from each text to the series that published it.
+
+export const quicktour = {
+  eyebrow: 'Galleria',
+  title: 'Quick tour',
+  intro:
+    'Tutte le opere del catalogo, una alla volta e in ordine di serie, come lo slideshow del sito originale. Le frecce si muovono anche da tastiera, la pagina resta alle spalle.',
+};
 
 export const contact = {
   title: 'Contatti',

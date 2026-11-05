@@ -29,7 +29,7 @@ Tone: sober, precise, gallery register. No exclamation marks, no marketing super
 | 1 | Home | / |
 | 2 | L'artista | /artista |
 | 3 | Opere | /opere |
-| 4 | Testi | /testi |
+| 4 | Quick tour | /quicktour |
 | 5 | Contatti | /contatti |
 
 Footer links: note legali, privacy, torna su.
@@ -90,7 +90,7 @@ La riga "Nato" resta omessa finché il cliente non fornisce il dato.
 
 Ogni sezione mostra il titolo della serie in alto (se il titolo manca la riga resta vuota), anno, categoria e numero di opere, poi una sola riga di anteprima con al massimo sei immagini. La riga non va mai a capo: se la serie ha meno immagini lo spazio restante resta vuoto, sulle schermate strette le immagini oltre le colonne visibili sono nascoste. Un solo clic sulla sezione apre la pagina della serie, con l'intera griglia e il testo critico allegato.
 
-L'indice dichiara il totale in testata: 17 serie e 76 opere, dal 1994 al 2010. I filtri di categoria contano le serie, non le opere. Il pulsante "Sfoglia tutte le opere" apre un dialogo galleria che scorre l'intero catalogo in ordine di serie, citando la serie nella didascalia, come lo slideshow del sito originale.
+L'indice dichiara il totale in testata: 17 serie e 76 opere, dal 1994 al 2010. I filtri di categoria contano le serie, non le opere. Il pulsante "Sfoglia tutte le opere" vive nella sezione Catalogo della home e apre la pagina Quick tour, da cui un dialogo galleria scorre l'intero catalogo in ordine di serie citando la serie nella didascalia, come lo slideshow del sito originale.
 
 | Titolo serie | Anno | Opere | Categoria |
 | --- | --- | --- | --- |
@@ -145,7 +145,7 @@ Etichette di interfaccia:
 
 ## 8. Testi
 
-La pagina Testi raccoglie i testi critici già pubblicati sul sito attuale. Ogni scheda mostra titolo, autore, anno, lingue e le serie da cui il testo è raggiungibile. Il selettore di lingua compare solo quando esiste più di una versione.
+Non esiste più una pagina indice dei testi: la voce di menu "Testi" è stata sostituita da "Quick tour". Ogni testo critico è raggiungibile solo dalla pagina della serie che lo pubblica, dove compaiono titolo, autore, anno, lingue e i link alle serie collegate. Il selettore di lingua compare solo quando esiste più di una versione.
 
 I testi non esistono come contenuto indipendente: sul sito originale erano raggiungibili solo dal piccolo pulsante "text" dentro la banda della serie, e un solo testo poteva essere aperto da due bande diverse (Ritratti 2001 e Ritratti 1994 e 2004 condividono lo stesso testo). La pagina di ogni serie mostra il testo che l'accompagna, e ogni pagina testo rinvia alle serie collegate.
 
@@ -165,8 +165,6 @@ I corpi dei testi sono pubblicati nella lingua originale, trascritti dalle pagin
 
 Etichette:
 
-- Titolo sezione: Testi
-- Testo introduttivo: Testi critici e note d'autore che accompagnano le serie del catalogo.
 - Leggi il testo
 - Serie
 - Lingua originale

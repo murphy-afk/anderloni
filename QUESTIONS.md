@@ -65,7 +65,7 @@ Work continues with the assets already scraped. Broken or low quality images are
 | --- | --- | --- |
 | Q23 | Should the address be written as "C.na Comperto" or "Cascina Comperto"? | Currently expanded to Cascina. Confirm. |
 | Q24 | Are the years and dimensions on the current site correct? Several entries mix centimetres and inches inconsistently. | Data clean up before migration into MySQL. |
-| Q25 | Should the Quicktour slideshow survive as an automatic carousel, or be dropped in favour of the catalogue? | Currently implemented as a manual browse dialog on the catalogue index, "Sfoglia tutte le opere", ordered by series. An automatic home carousel is not built. Confirm. |
+| Q25 | Should the Quicktour slideshow survive as an automatic carousel, or be dropped in favour of the catalogue? | Currently a manual browse dialog on the Quick tour page, opened from the Home "Sfoglia tutte le opere" button, ordered by series. An automatic home carousel is not built. Confirm. |
 | Q26 | Do you have social profiles, Instagram or similar, to link in the footer? | Small addition, useful for collectors. |
 | Q27 | Is anything missing from the current site that you want in the new one, for example a newsletter or a curated press page? | Scope control. |
 

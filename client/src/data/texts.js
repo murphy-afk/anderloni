@@ -102,5 +102,6 @@ export const texts = [
   },
 ];
 
-export const textsIntro =
-  "Testi critici e note d'autore che accompagnano le serie del catalogo.";
+// Series that published the text on the original site are recorded per text
+// above; there is no texts index page anymore, each text is reached from its
+// series page.

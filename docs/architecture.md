@@ -97,8 +97,9 @@ Routes built in Session 3:
 | `/opere` | Series index |
 | `/opere/:serie` | Single series |
 | `/opere/:serie/:opera` | Single work |
-| `/testi` | Critical texts |
-| `/testi/:testo` | Single text |
+| `/quicktour` | Quick tour, browse dialog over the whole catalogue |
+| `/testi` | Redirect to `/opere`, the texts index was removed |
+| `/testi/:testo` | Single text, reached from its series page |
 | `/contatti` | Contact |
 | `/note-legali` | Legal notes placeholder |
 | `/privacy` | Privacy placeholder |

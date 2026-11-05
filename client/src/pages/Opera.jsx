@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import Lightbox from '../components/Lightbox.jsx';
 import useSeo from '../hooks/useSeo.js';
 import { asset } from '../lib/asset.js';
@@ -10,6 +10,7 @@ import { micro } from '../data/site.js';
 // Single artwork: dark plate, exhibition caption, previous and next control.
 export default function Opera() {
   const { serie, opera } = useParams();
+  const navigate = useNavigate();
   const series = useCatalog();
   const item = getSeries(series, serie);
   const work = item ? getWork(item, opera) : null;
@@ -70,17 +71,56 @@ export default function Opera() {
       </div>
 
       <div className="artwork__plate">
-        {work.image ? (
-          <img
-            className="artwork__image"
-            src={asset(work.image)}
-            alt={`${title}, ${year}`}
-            {...(work.imageWidth && work.imageHeight
-              ? { width: work.imageWidth, height: work.imageHeight }
-              : {})} />
-        ) : (
-          <p className="artwork__row">{micro.imageMissing}</p>
-        )}
+        <div className="artwork__stage">
+          {previous ? (
+            <Link
+              className="lightbox__nav"
+              to={`/opere/${item.slug}/${previous.slug}`}
+              aria-label={micro.previousWork}
+              title={micro.previousWork}>
+              ←
+            </Link>
+          ) : null}
+          {work.image ? (
+            <img
+              className="artwork__image"
+              src={asset(work.image)}
+              alt={`${title}, ${year}`}
+              {...(work.imageWidth && work.imageHeight
+                ? { width: work.imageWidth, height: work.imageHeight }
+                : {})} />
+          ) : (
+            <p className="artwork__row">{micro.imageMissing}</p>
+          )}
+          {next ? (
+            <Link
+              className="lightbox__nav"
+              to={`/opere/${item.slug}/${next.slug}`}
+              aria-label={micro.nextWork}
+              title={micro.nextWork}>
+              →
+            </Link>
+          ) : null}
+        </div>
+      </div>
+
+      <div className="container">
+        <nav className="artwork__nav" aria-label="Navigazione tra le opere">
+          {previous ? (
+            <Link className="artwork__nav-link" to={`/opere/${item.slug}/${previous.slug}`}>
+              ← {micro.previousWork}
+            </Link>
+          ) : (
+            <span />
+          )}
+          {next ? (
+            <Link className="artwork__nav-link" to={`/opere/${item.slug}/${next.slug}`}>
+              {micro.nextWork} →
+            </Link>
+          ) : (
+            <span />
+          )}
+        </nav>
       </div>
 
       <div className="page container">
@@ -108,27 +148,20 @@ export default function Opera() {
             ) : null}
           </div>
         </div>
-
-        <nav className="artwork__nav" aria-label="Navigazione tra le opere">
-          {previous ? (
-            <Link className="artwork__nav-link" to={`/opere/${item.slug}/${previous.slug}`}>
-              ← {micro.previousWork}
-            </Link>
-          ) : (
-            <span />
-          )}
-          {next ? (
-            <Link className="artwork__nav-link" to={`/opere/${item.slug}/${next.slug}`}>
-              {micro.nextWork} →
-            </Link>
-          ) : (
-            <span />
-          )}
-        </nav>
       </div>
 
       {enlarged && work.image ? (
-        <Lightbox src={asset(work.image)} alt={`${title}, ${year}`} onClose={() => setEnlarged(false)} />
+        <Lightbox
+          src={asset(work.image)}
+          alt={`${title}, ${year}`}
+          onPrev={
+            previous
+              ? () => navigate(`/opere/${item.slug}/${previous.slug}`)
+              : undefined
+          }
+          onNext={next ? () => navigate(`/opere/${item.slug}/${next.slug}`) : undefined}
+          onClose={() => setEnlarged(false)}
+        />
       ) : null}
     </div>
   );
