@@ -167,18 +167,20 @@ Downloaded into `_reference/`:
 
 | Folder | Content | Files | Size |
 | --- | --- | --- | --- |
-| `_reference/gallery` | Gallery thumbnails used on the three gallery pages | 75 | 1.56 MB |
+| `_reference/gallery` | Gallery thumbnails still referenced by the catalogue | 10 | 0.18 MB |
 | `_reference/full` | Full size images reached from the zoom pages | 65 | 2.94 MB |
 | `_reference/html` | Saved source pages and the 83 zoom pages | 89 | 0.37 MB |
 | `_reference/texts` | Critical texts flattened to plain text | 9 | 0.09 MB |
 | `_reference/site` | Visual reference samples used for the palette analysis | 9 | 0.19 MB |
+
+The other 65 gallery thumbnails were removed on 2026-11-05 because each duplicated a full size image, from `_reference/gallery` and `client/public/works/gallery` alike, saving 2.76 MB. The 10 that remain are the only visuals for works that have no full size file: the 5 video posters, the 3 Cuando llueve diluvia works, ab initio and one Still life work. `npm run assets` now copies only those 10, and the catalogue was regenerated so no record points at a deleted file.
 
 Known gaps:
 
 - `pag3/__c%2Bj%20530x800.jpg` returns a server error on the source site. The file is missing and must be requested from the client.
 - The 5 videos are not hosted on the site. The video cells reference small JPEG posters only, so the actual media must be requested from the client.
 - Several original filenames contain spaces, accents, and `%20`, `%2B` escapes. All filenames must be normalised in Session 2.
-- The plain text extraction in `_reference/texts` loses accented characters on three pages, because those pages declare windows-1252 while the rest declare iso-8859-1. Clean transcription into `docs/source-texts/` is required before publishing.
+- The plain text extraction in `_reference/texts` loses accented characters on three pages, because those pages declare windows-1252 while the rest declare iso-8859-1. Superseded: the texts were re-transcribed from the saved HTML into `docs/source-texts/`, and the files in `_reference/texts` remain only as scrape artifacts.
 
 ## 8. Open questions for the client
 

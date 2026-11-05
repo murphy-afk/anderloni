@@ -14,7 +14,7 @@
           "year": "2009",
           "dimensionsAsPublished": "50 x 38 cm",
           "dimensionsSecondaryPublished": "19.6\" x14.9\"",
-          "galleryThumb": "_reference/gallery/images_____06_10_cen012sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/images_____06_10_cen012.jpg",
           "video": false,
           "missingSource": false
@@ -26,7 +26,7 @@
           "year": "2009",
           "dimensionsAsPublished": "50 x 38 cm",
           "dimensionsSecondaryPublished": "19.6\" x14.9\"",
-          "galleryThumb": "_reference/gallery/images_____06_10_cen006bsm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/images_____06_10_cen006b.jpg",
           "video": false,
           "missingSource": false
@@ -38,7 +38,7 @@
           "year": "2009",
           "dimensionsAsPublished": "50 x 38 cm",
           "dimensionsSecondaryPublished": "19.6\" x14.9\"",
-          "galleryThumb": "_reference/gallery/images_____06_10_cen002sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/images_____06_10_cen002.jpg",
           "video": false,
           "missingSource": false
@@ -50,7 +50,7 @@
           "year": "2009",
           "dimensionsAsPublished": "50 x 38 cm",
           "dimensionsSecondaryPublished": "19.6\" x14.9\"",
-          "galleryThumb": "_reference/gallery/images_____06_10_cen009sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/images_____06_10_cen009.jpg",
           "video": false,
           "missingSource": false
@@ -62,7 +62,7 @@
           "year": "2009",
           "dimensionsAsPublished": "90 x 100cm",
           "dimensionsSecondaryPublished": "35.4\" x 39.3\"",
-          "galleryThumb": "_reference/gallery/images_____09_04_1056sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/images_____09_04_1056.jpg",
           "video": false,
           "missingSource": false
@@ -86,7 +86,7 @@
           "year": null,
           "dimensionsAsPublished": null,
           "dimensionsSecondaryPublished": null,
-          "galleryThumb": "_reference/gallery/images_____sm_gen_view_dab02.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/images_____dab_gen_view_dab02.jpg",
           "video": false,
           "missingSource": false
@@ -104,7 +104,7 @@
           "year": "2006",
           "dimensionsAsPublished": "140 x 140 cm",
           "dimensionsSecondaryPublished": "55,1\" x 55,1\"",
-          "galleryThumb": "_reference/gallery/images__03_1_ins02_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/images__03_1_ins02.jpg",
           "video": false,
           "missingSource": false
@@ -116,7 +116,7 @@
           "year": "2006",
           "dimensionsAsPublished": "100 x 100cm",
           "dimensionsSecondaryPublished": "39.3\" x 39.3\"",
-          "galleryThumb": "_reference/gallery/images__03_2_ins04_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/images__03_2_ins04.jpg",
           "video": false,
           "missingSource": false
@@ -128,7 +128,7 @@
           "year": "2006",
           "dimensionsAsPublished": "130 x 100cm",
           "dimensionsSecondaryPublished": "51.1\" x 39.3\"",
-          "galleryThumb": "_reference/gallery/images__03_3_ins012-007_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/images__03_3_ins012-007.jpg",
           "video": false,
           "missingSource": false
@@ -140,7 +140,7 @@
           "year": null,
           "dimensionsAsPublished": null,
           "dimensionsSecondaryPublished": null,
-          "galleryThumb": "_reference/gallery/images__03_ins_detail_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/images__03_ins_detail.jpg",
           "video": false,
           "missingSource": false
@@ -152,7 +152,7 @@
           "year": null,
           "dimensionsAsPublished": null,
           "dimensionsSecondaryPublished": null,
-          "galleryThumb": "_reference/gallery/images_____03_4_ins view_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/images_____03_4_ins view.jpg",
           "video": false,
           "missingSource": false
@@ -170,7 +170,7 @@
           "year": "2006",
           "dimensionsAsPublished": "100 x120 cm",
           "dimensionsSecondaryPublished": "39,3\" x 47,2\"",
-          "galleryThumb": "_reference/gallery/images__02_1_coc002_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/images__02_1_coc002.jpg",
           "video": false,
           "missingSource": false
@@ -182,7 +182,7 @@
           "year": "2006",
           "dimensionsAsPublished": "100 x120 cm",
           "dimensionsSecondaryPublished": "39,3\" x 47,2\"",
-          "galleryThumb": "_reference/gallery/images__02_2_coc001_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/images__02_2_coc001.jpg",
           "video": false,
           "missingSource": false
@@ -194,7 +194,7 @@
           "year": "2006",
           "dimensionsAsPublished": "100 x120 cm",
           "dimensionsSecondaryPublished": "39,3\" x 47,2\"",
-          "galleryThumb": "_reference/gallery/images__02_3_coc003c_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/images__02_3_coc003c.jpg",
           "video": false,
           "missingSource": false
@@ -206,7 +206,7 @@
           "year": null,
           "dimensionsAsPublished": null,
           "dimensionsSecondaryPublished": null,
-          "galleryThumb": "_reference/gallery/images__02_3_coc_detail_2_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/images__02_3_coc_detail_2.jpg",
           "video": false,
           "missingSource": false
@@ -224,7 +224,7 @@
           "year": "2006",
           "dimensionsAsPublished": "100 x 150 cm",
           "dimensionsSecondaryPublished": "39,3\" x 59 \"",
-          "galleryThumb": "_reference/gallery/images__01_1_flo003_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/images__01_1_flo003.jpg",
           "video": false,
           "missingSource": false
@@ -236,7 +236,7 @@
           "year": "2006",
           "dimensionsAsPublished": "90 x 120 cm",
           "dimensionsSecondaryPublished": "35,4\" x 47,2\"",
-          "galleryThumb": "_reference/gallery/images__01_2_flo001_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/images__01_2_flo001.jpg",
           "video": false,
           "missingSource": false
@@ -260,7 +260,7 @@
           "year": "2006",
           "dimensionsAsPublished": "100 x 150 cm",
           "dimensionsSecondaryPublished": "39,3\" x 59 \"",
-          "galleryThumb": "_reference/gallery/images__01_4_flo004_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/images__01_4_flo004.jpg",
           "video": false,
           "missingSource": false
@@ -272,7 +272,7 @@
           "year": null,
           "dimensionsAsPublished": null,
           "dimensionsSecondaryPublished": null,
-          "galleryThumb": "_reference/gallery/images__01_flo_detail_2_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/images__01_flo_detail_2.jpg",
           "video": false,
           "missingSource": false
@@ -284,7 +284,7 @@
           "year": null,
           "dimensionsAsPublished": null,
           "dimensionsSecondaryPublished": null,
-          "galleryThumb": "_reference/gallery/images__01_5_flo_view_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/images__01_5_flo_view.jpg",
           "video": false,
           "missingSource": false
@@ -302,7 +302,7 @@
           "year": "2006",
           "dimensionsAsPublished": "180 x 130 cm",
           "dimensionsSecondaryPublished": "70.8\" x 51.1\"",
-          "galleryThumb": "_reference/gallery/images__02_4_bod001_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/images__02_4_bod001.jpg",
           "video": false,
           "missingSource": false
@@ -314,7 +314,7 @@
           "year": "2006",
           "dimensionsAsPublished": "130 x 100 cm",
           "dimensionsSecondaryPublished": "51.1\" x 39.3\"",
-          "galleryThumb": "_reference/gallery/images__02_4_bod003_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/images__02_4_bod003.jpg",
           "video": false,
           "missingSource": false
@@ -326,7 +326,7 @@
           "year": "2006",
           "dimensionsAsPublished": "130 x 100 cm",
           "dimensionsSecondaryPublished": "51.1\" x 39.3\"",
-          "galleryThumb": "_reference/gallery/images__02_4_bod002_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/images__02_4_bod002.jpg",
           "video": false,
           "missingSource": false
@@ -344,7 +344,7 @@
           "year": "2006",
           "dimensionsAsPublished": "68 x 50 cm",
           "dimensionsSecondaryPublished": "26.7\" x 19.6",
-          "galleryThumb": "_reference/gallery/images__07_1_4inscoll_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/images__07_1_4inscoll.jpg",
           "video": false,
           "missingSource": false
@@ -356,7 +356,7 @@
           "year": "2006",
           "dimensionsAsPublished": "68 x 50 cm",
           "dimensionsSecondaryPublished": "26.7\" x 19.6\"",
-          "galleryThumb": "_reference/gallery/images__07_2_2bi_co_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/images__07_2_2bi_co.jpg",
           "video": false,
           "missingSource": false
@@ -368,7 +368,7 @@
           "year": "2005",
           "dimensionsAsPublished": "24 x 32 cm",
           "dimensionsSecondaryPublished": "9.4\" x 12.6\"",
-          "galleryThumb": "_reference/gallery/images__08_02_dib_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/images__08_02_dib.jpg",
           "video": false,
           "missingSource": false
@@ -380,7 +380,7 @@
           "year": "2005",
           "dimensionsAsPublished": "24 x 32 cm",
           "dimensionsSecondaryPublished": "9.4\" x 12.6\"",
-          "galleryThumb": "_reference/gallery/images__08_01_dib_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/images__08_01_dib.jpg",
           "video": false,
           "missingSource": false
@@ -464,7 +464,7 @@
           "year": "2004",
           "dimensionsAsPublished": "40 x 34 cm",
           "dimensionsSecondaryPublished": "15,7\" x 13,3 \"",
-          "galleryThumb": "_reference/gallery/pag2__05_1_fograb01_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag2__05_1_fograb01.jpg",
           "video": false,
           "missingSource": false
@@ -476,7 +476,7 @@
           "year": "2004",
           "dimensionsAsPublished": null,
           "dimensionsSecondaryPublished": null,
-          "galleryThumb": "_reference/gallery/pag2__05_2_fograb02_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag2__05_2_fograb02.jpg",
           "video": false,
           "missingSource": false
@@ -488,7 +488,7 @@
           "year": "2004",
           "dimensionsAsPublished": null,
           "dimensionsSecondaryPublished": null,
-          "galleryThumb": "_reference/gallery/pag2__05_3_fograb03_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag2__05_3_fograb03.jpg",
           "video": false,
           "missingSource": false
@@ -506,7 +506,7 @@
           "year": "2000",
           "dimensionsAsPublished": "30 x 40 cm",
           "dimensionsSecondaryPublished": "11.8\" x 15,7 \"",
-          "galleryThumb": "_reference/gallery/pag2__06_BN2_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag2__06_BN2.jpg",
           "video": false,
           "missingSource": false
@@ -518,7 +518,7 @@
           "year": "2000",
           "dimensionsAsPublished": null,
           "dimensionsSecondaryPublished": null,
-          "galleryThumb": "_reference/gallery/pag2__06_BN1_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag2__06_BN1.jpg",
           "video": false,
           "missingSource": false
@@ -530,7 +530,7 @@
           "year": "2000",
           "dimensionsAsPublished": null,
           "dimensionsSecondaryPublished": null,
-          "galleryThumb": "_reference/gallery/pag2__06_BN4_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag2__06_BN4.jpg",
           "video": false,
           "missingSource": false
@@ -542,7 +542,7 @@
           "year": "2000",
           "dimensionsAsPublished": "50 x 32 cm",
           "dimensionsSecondaryPublished": "19.6\" x 12.9 \"",
-          "galleryThumb": "_reference/gallery/pag2__06_BN0_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag2__06_BN0.jpg",
           "video": false,
           "missingSource": false
@@ -602,7 +602,7 @@
           "year": "2001",
           "dimensionsAsPublished": "100x160cm",
           "dimensionsSecondaryPublished": "39,3x63 \"",
-          "galleryThumb": "_reference/gallery/pag3____ent001_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3____ent001.jpg",
           "video": false,
           "missingSource": false
@@ -614,7 +614,7 @@
           "year": "2001",
           "dimensionsAsPublished": null,
           "dimensionsSecondaryPublished": null,
-          "galleryThumb": "_reference/gallery/pag3____ent002_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3____ent002.jpg",
           "video": false,
           "missingSource": false
@@ -626,7 +626,7 @@
           "year": "2001",
           "dimensionsAsPublished": null,
           "dimensionsSecondaryPublished": null,
-          "galleryThumb": "_reference/gallery/pag3____ent007_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3____ent007.jpg",
           "video": false,
           "missingSource": false
@@ -638,7 +638,7 @@
           "year": "2001",
           "dimensionsAsPublished": null,
           "dimensionsSecondaryPublished": null,
-          "galleryThumb": "_reference/gallery/pag3____ent003_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3____ent003.jpg",
           "video": false,
           "missingSource": false
@@ -650,7 +650,7 @@
           "year": "2001",
           "dimensionsAsPublished": null,
           "dimensionsSecondaryPublished": null,
-          "galleryThumb": "_reference/gallery/pag3____ent004_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3____ent004.jpg",
           "video": false,
           "missingSource": false
@@ -668,7 +668,7 @@
           "year": "1997",
           "dimensionsAsPublished": "100x 130 cm",
           "dimensionsSecondaryPublished": "39,3\" x 51,1 \"",
-          "galleryThumb": "_reference/gallery/pag3____103_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3____103.jpg",
           "video": false,
           "missingSource": false
@@ -680,7 +680,7 @@
           "year": "1997",
           "dimensionsAsPublished": null,
           "dimensionsSecondaryPublished": null,
-          "galleryThumb": "_reference/gallery/pag3____103v_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3____103v.jpg",
           "video": false,
           "missingSource": false
@@ -698,7 +698,7 @@
           "year": null,
           "dimensionsAsPublished": null,
           "dimensionsSecondaryPublished": null,
-          "galleryThumb": "_reference/gallery/pag3___03_pd_view_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3___03_pd_view.jpg",
           "video": false,
           "missingSource": false
@@ -710,7 +710,7 @@
           "year": "1996",
           "dimensionsAsPublished": "60 x 80 cm",
           "dimensionsSecondaryPublished": "23,6\" x 31,4 \"",
-          "galleryThumb": "_reference/gallery/pag3___03_pd_04sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3___03_pd_04.jpg",
           "video": false,
           "missingSource": false
@@ -722,7 +722,7 @@
           "year": "1996",
           "dimensionsAsPublished": null,
           "dimensionsSecondaryPublished": null,
-          "galleryThumb": "_reference/gallery/pag3___03_pd_03sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3___03_pd_03.jpg",
           "video": false,
           "missingSource": false
@@ -734,7 +734,7 @@
           "year": "1996",
           "dimensionsAsPublished": null,
           "dimensionsSecondaryPublished": null,
-          "galleryThumb": "_reference/gallery/pag3___03_pd_01sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3___03_pd_01.jpg",
           "video": false,
           "missingSource": false
@@ -746,7 +746,7 @@
           "year": "1996",
           "dimensionsAsPublished": null,
           "dimensionsSecondaryPublished": null,
-          "galleryThumb": "_reference/gallery/pag3___03_pd_02sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3___03_pd_02.jpg",
           "video": false,
           "missingSource": false
@@ -764,7 +764,7 @@
           "year": "1998",
           "dimensionsAsPublished": null,
           "dimensionsSecondaryPublished": null,
-          "galleryThumb": "_reference/gallery/pag3____Gfer_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3____Gfer.jpg",
           "video": false,
           "missingSource": false
@@ -776,7 +776,7 @@
           "year": "1998",
           "dimensionsAsPublished": "100x160x35 cm",
           "dimensionsSecondaryPublished": "39,3\"x63\"x13,7 \"",
-          "galleryThumb": "_reference/gallery/pag3____sunintheh1_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3____sunintheh1.jpg",
           "video": false,
           "missingSource": false
@@ -788,7 +788,7 @@
           "year": "1998",
           "dimensionsAsPublished": null,
           "dimensionsSecondaryPublished": null,
-          "galleryThumb": "_reference/gallery/pag3____sunintheh2_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3____sunintheh2.jpg",
           "video": false,
           "missingSource": false
@@ -800,7 +800,7 @@
           "year": "1998",
           "dimensionsAsPublished": null,
           "dimensionsSecondaryPublished": null,
-          "galleryThumb": "_reference/gallery/pag3____sunintheh3_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3____sunintheh3.jpg",
           "video": false,
           "missingSource": false
@@ -818,7 +818,7 @@
           "year": "1997",
           "dimensionsAsPublished": "100x 130 cm",
           "dimensionsSecondaryPublished": "39,3\" x 51,1 \"",
-          "galleryThumb": "_reference/gallery/pag3____silla452x590_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3____silla452x590.jpg",
           "video": false,
           "missingSource": false
@@ -842,7 +842,7 @@
           "year": "1998",
           "dimensionsAsPublished": "60 x 80 x 25 cm",
           "dimensionsSecondaryPublished": "23.6\" x 39,3\" x 9.8\"",
-          "galleryThumb": "_reference/gallery/pag3____caja_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3____caja.jpg",
           "video": false,
           "missingSource": false
@@ -854,7 +854,7 @@
           "year": "1996",
           "dimensionsAsPublished": "80 x 100 cm",
           "dimensionsSecondaryPublished": "39,3\" x 31,5\"",
-          "galleryThumb": "_reference/gallery/pag3____grito_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3____grito.jpg",
           "video": false,
           "missingSource": false
@@ -866,7 +866,7 @@
           "year": "1996",
           "dimensionsAsPublished": "80 x 60 cm",
           "dimensionsSecondaryPublished": "39,3\" x 23.6\"",
-          "galleryThumb": "_reference/gallery/pag3___natmor_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3___natmor.jpg",
           "video": false,
           "missingSource": false
@@ -878,7 +878,7 @@
           "year": "1999",
           "dimensionsAsPublished": "100x 130 cm",
           "dimensionsSecondaryPublished": "39,3\" x 51,1 \"",
-          "galleryThumb": "_reference/gallery/pag3___INTIM02_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3___INTIM02.jpg",
           "video": false,
           "missingSource": false
@@ -890,7 +890,7 @@
           "year": "1999",
           "dimensionsAsPublished": "100x 130 cm",
           "dimensionsSecondaryPublished": "39,3\" x 51,1 \"",
-          "galleryThumb": "_reference/gallery/pag3___INTIM01_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3___INTIM01.jpg",
           "video": false,
           "missingSource": false
@@ -902,7 +902,7 @@
           "year": "1999",
           "dimensionsAsPublished": "100x 130 cm",
           "dimensionsSecondaryPublished": "39,3\" x 51,1 \"",
-          "galleryThumb": "_reference/gallery/pag3___INTIM05_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3___INTIM05.jpg",
           "video": false,
           "missingSource": false
@@ -914,7 +914,7 @@
           "year": "1999",
           "dimensionsAsPublished": "100 x 80 cm",
           "dimensionsSecondaryPublished": "39,3\" x 31.4\"",
-          "galleryThumb": "_reference/gallery/pag3____nube_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3____nube.jpg",
           "video": false,
           "missingSource": false
@@ -926,7 +926,7 @@
           "year": "1999",
           "dimensionsAsPublished": "130 x 100 cm",
           "dimensionsSecondaryPublished": "51.1\" x 39,3\"",
-          "galleryThumb": "_reference/gallery/pag3____negr01a_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3____negr01a.jpg",
           "video": false,
           "missingSource": false
@@ -944,7 +944,7 @@
           "year": "1998",
           "dimensionsAsPublished": "100x 130 cm",
           "dimensionsSecondaryPublished": "39,3\" x 51,1 \"",
-          "galleryThumb": "_reference/gallery/pag3____INT1_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3____INT1.jpg",
           "video": false,
           "missingSource": false
@@ -956,7 +956,7 @@
           "year": "1998",
           "dimensionsAsPublished": null,
           "dimensionsSecondaryPublished": null,
-          "galleryThumb": "_reference/gallery/pag3____INT2_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3____INT2.jpg",
           "video": false,
           "missingSource": false
@@ -968,7 +968,7 @@
           "year": "1998",
           "dimensionsAsPublished": null,
           "dimensionsSecondaryPublished": null,
-          "galleryThumb": "_reference/gallery/pag3____INT3_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3____INT3.jpg",
           "video": false,
           "missingSource": false
@@ -980,7 +980,7 @@
           "year": "1998",
           "dimensionsAsPublished": null,
           "dimensionsSecondaryPublished": null,
-          "galleryThumb": "_reference/gallery/pag3____INT10_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3____INT10.jpg",
           "video": false,
           "missingSource": false
@@ -998,7 +998,7 @@
           "year": "1998",
           "dimensionsAsPublished": "200x 30 cm",
           "dimensionsSecondaryPublished": "78,7\" x 11,8 \"",
-          "galleryThumb": "_reference/gallery/pag3____colorlig2_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3____colorlig2.jpg",
           "video": false,
           "missingSource": false
@@ -1010,7 +1010,7 @@
           "year": "1998",
           "dimensionsAsPublished": "200x 150 cm",
           "dimensionsSecondaryPublished": "78,7\" x 59\"",
-          "galleryThumb": "_reference/gallery/pag3____colorlig1_sm.jpg",
+          "galleryThumb": null,
           "fullImage": "_reference/full/pag3____colorlig1.jpg",
           "video": false,
           "missingSource": false
