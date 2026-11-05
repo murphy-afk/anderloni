@@ -45,6 +45,15 @@ Working rules live in `AGENTS.md`. This file tracks execution phases only.
 - [ ] Collect client feedback.
 - [ ] Migrate from temporary staging setup to final target hosting server based on client choice.
 
+## Session 8: Content restructure (texts, series, gallery)
+- [x] Tie each critical text to the series that published it, on the series, testi and text pages.
+- [x] Transcribe the nine text bodies from the saved source pages into `docs/source-texts/` and `client/src/data/texts/`.
+- [x] Correct text metadata (authors, years, languages) against the transcriptions.
+- [x] State catalogue totals on the index (17 series, 76 works) and label filter counts as series.
+- [x] Rebuild the index as one band per series: title on top, single row of up to six previews, no wrapping, opening the series page.
+- [x] Add the browse-all dialog: whole catalogue in series order with captions.
+- [ ] Confirm transcription questions with the client (`QUESTIONS.md` Q17 to Q21, Q36 to Q39).
+
 ## Deployment Strategy
 1. Primary preview deployment: temporary hosting on GitHub Pages for client showcase.
 2. Final deployment: shift to production server or hosting provider selected after client approval.

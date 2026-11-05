@@ -5,11 +5,13 @@ import { asset } from '../lib/asset.js';
 import useCatalog from '../hooks/useCatalog.js';
 import { getSeries } from '../lib/catalog.js';
 import { categoryIntros, micro } from '../data/site.js';
+import useTexts from '../hooks/useTexts.js';
 
 // Works of a single series.
 export default function Serie() {
   const { serie } = useParams();
   const series = useCatalog();
+  const texts = useTexts();
   const item = getSeries(series, serie);
 
   useSeo({
@@ -34,6 +36,7 @@ export default function Serie() {
   }
 
   const intro = categoryIntros[item.category];
+  const text = texts.find((entry) => entry.seriesSlugs?.includes(item.slug));
 
   return (
     <div className="page container">
@@ -49,6 +52,24 @@ export default function Serie() {
         </p>
         {intro ? <p className="series-header__intro">{intro}</p> : null}
       </header>
+
+      {text ? (
+        <aside className="series-text">
+          <p className="series-text__label">Testo</p>
+          <p className="series-text__title">{text.title}</p>
+          <p className="series-text__meta">
+            {[
+              text.author !== 'da confermare' ? text.author : null,
+              text.year !== 'da confermare' ? text.year : null,
+            ]
+              .filter(Boolean)
+              .join(' · ')}
+          </p>
+          <Link className="series-text__link" to={`/testi/${text.slug}`}>
+            {micro.readText} →
+          </Link>
+        </aside>
+      ) : null}
 
       <ul className="works-grid" role="list">
         {item.works.map((work) => (

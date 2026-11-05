@@ -2,14 +2,20 @@ import { Link, useParams } from 'react-router-dom';
 import PageHeader from '../components/PageHeader.jsx';
 import useSeo from '../hooks/useSeo.js';
 import useTexts from '../hooks/useTexts.js';
+import useCatalog from '../hooks/useCatalog.js';
+import { getSeries } from '../lib/catalog.js';
 import { micro } from '../data/site.js';
 
-// Single critical text. Body copy is rendered once the cleaned transcriptions
-// land, see docs/source-texts and QUESTIONS.md Q17.
+// Single critical text. Body copy comes from the cleaned transcriptions in
+// client/src/data/texts/, editorial masters in docs/source-texts/.
 export default function Testo() {
   const { testo } = useParams();
   const texts = useTexts();
+  const series = useCatalog();
   const text = texts.find((item) => item.slug === testo);
+  const linkedSeries = text
+    ? (text.seriesSlugs || []).map((slug) => getSeries(series, slug)).filter(Boolean)
+    : [];
 
   useSeo({
     title: text ? `${text.title}, Guido Anderloni` : 'Testo, Guido Anderloni',
@@ -40,6 +46,8 @@ export default function Testo() {
     );
   }
 
+  const sections = text.sections || [];
+
   return (
     <div className="page container">
       <article className="text">
@@ -58,10 +66,40 @@ export default function Testo() {
             <dt className="facts__label">Lingue</dt>
             <dd className="facts__value">{text.languages.join(', ')}</dd>
           </div>
+          {linkedSeries.length > 0 ? (
+            <div className="facts__row">
+              <dt className="facts__label">Serie</dt>
+              <dd className="facts__value">
+                {linkedSeries.map((item, index) => (
+                  <span key={item.slug}>
+                    {index > 0 ? ', ' : ''}
+                    <Link to={`/opere/${item.slug}`}>
+                      {item.title}, {item.year}
+                    </Link>
+                  </span>
+                ))}
+              </dd>
+            </div>
+          ) : null}
         </dl>
 
         <div className="text__body flow">
-          <p className="text__pending">Il testo completo sarà pubblicato dopo la revisione editoriale.</p>
+          {sections.length > 0 ? (
+            sections.map((section) => (
+              <section className="text__section" key={section.language}>
+                {sections.length > 1 ? (
+                  <h2 className="text__language">{section.language}</h2>
+                ) : null}
+                {section.paragraphs.map((paragraph, index) => (
+                  <p className="text__paragraph" key={`${section.language}-${index}`}>
+                    {paragraph}
+                  </p>
+                ))}
+              </section>
+            ))
+          ) : (
+            <p className="text__pending">Il testo completo sarà pubblicato dopo la revisione editoriale.</p>
+          )}
           {!text.languages.includes('Italiano') ? (
             <p className="text__note">{micro.noItalianVersion}</p>
           ) : null}

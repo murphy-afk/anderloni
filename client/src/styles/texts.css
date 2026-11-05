@@ -46,6 +46,14 @@
   font-size: var(--text-xs);
 }
 
+/* Series that published the text on the original site. */
+.text-card__series {
+  display: block;
+  padding-bottom: var(--space-md);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
 .text__facts {
   max-width: var(--measure);
   padding-bottom: var(--space-xl);
@@ -54,6 +62,22 @@
 .text__body {
   --flow-space: var(--space-lg);
   max-width: var(--measure);
+}
+
+.text__section + .text__section {
+  margin-block-start: var(--space-xl);
+}
+
+.text__language {
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.text__paragraph + .text__paragraph {
+  margin-block-start: var(--space-md);
 }
 
 .text__pending {

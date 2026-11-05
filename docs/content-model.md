@@ -88,7 +88,9 @@ La riga "Nato" resta omessa finché il cliente non fornisce il dato.
 
 ## 6. Opere, indice delle serie
 
-Ogni scheda mostra titolo, anno, numero di opere e immagine di copertina.
+Ogni sezione mostra il titolo della serie in alto (se il titolo manca la riga resta vuota), anno, categoria e numero di opere, poi una sola riga di anteprima con al massimo sei immagini. La riga non va mai a capo: se la serie ha meno immagini lo spazio restante resta vuoto, sulle schermate strette le immagini oltre le colonne visibili sono nascoste. Un solo clic sulla sezione apre la pagina della serie, con l'intera griglia e il testo critico allegato.
+
+L'indice dichiara il totale in testata: 17 serie e 76 opere, dal 1994 al 2010. I filtri di categoria contano le serie, non le opere. Il pulsante "Sfoglia tutte le opere" apre un dialogo galleria che scorre l'intero catalogo in ordine di serie, citando la serie nella didascalia, come lo slideshow del sito originale.
 
 | Titolo serie | Anno | Opere | Categoria |
 | --- | --- | --- | --- |
@@ -143,25 +145,30 @@ Etichette di interfaccia:
 
 ## 8. Testi
 
-La pagina Testi raccoglie i testi critici già pubblicati sul sito attuale. Ogni scheda mostra titolo, autore, anno e lingua originale. Il selettore di lingua compare solo quando esiste più di una versione.
+La pagina Testi raccoglie i testi critici già pubblicati sul sito attuale. Ogni scheda mostra titolo, autore, anno, lingue e le serie da cui il testo è raggiungibile. Il selettore di lingua compare solo quando esiste più di una versione.
 
-| Testo | Autore | Anno | Lingue |
-| --- | --- | --- | --- |
-| Quod superest | Alessandra Piolotto | 2009 | Italiano, Español |
-| Ritratti | Alicia Murria | da confermare | Spagnolo, Inglese |
-| Cuando llueve diluvia | Aurelio Horta | da confermare | Spagnolo |
-| Dettagli personali | da confermare | 1996 | Spagnolo |
-| Il sole nell'hangar | Francesca Pasini | da confermare | Italiano |
-| Il colore della luce | Francesca Pasini | da confermare | Italiano, Inglese |
-| After Man Ray | da confermare | da confermare | Inglese, Spagnolo |
-| 103 africans | Guido Anderloni | 1997 | Italiano |
-| Video | Guido Anderloni | da confermare | Italiano |
+I testi non esistono come contenuto indipendente: sul sito originale erano raggiungibili solo dal piccolo pulsante "text" dentro la banda della serie, e un solo testo poteva essere aperto da due bande diverse (Ritratti 2001 e Ritratti 1994 e 2004 condividono lo stesso testo). La pagina di ogni serie mostra il testo che l'accompagna, e ogni pagina testo rinvia alle serie collegate.
+
+| Testo | Autore | Anno | Lingue | Serie |
+| --- | --- | --- | --- | --- |
+| Quod superest | Alessandra Piolotto | 2009 | Español, Italiano | Quod superest |
+| Ritratti | Alicia Murría e José Angel Artetxe | da confermare | Inglese, Spagnolo | Ritratti 2001, Ritratti 1994 e 2004 |
+| Cuando llueve diluvia | Patricia Molins, José Emilio Pacheco, Clara Concepción Astiasarán, Lidia Blanco e Aurelio Horta | da confermare | Spagnolo | Cuando llueve diluvia |
+| Dettagli personali | Gianni Romano, Dawn Michelle Baude, Emanuela De Cecco e Alessandra Pioselli | 1996 - 1997 | Inglese, Italiano, Spagnolo | Dettagli personali |
+| Il sole nell'hangar | Francesca Pasini | da confermare | Italiano | Il sole nell'hangar |
+| Il colore della luce | da confermare | da confermare | Inglese, Spagnolo | Il colore della luce |
+| After Man Ray | da confermare | da confermare | Inglese, Spagnolo | After Man Ray |
+| 103 africans | Guido Anderloni | 1997 | Inglese, Spagnolo, Italiano | 103 africans |
+| Video | Guido Anderloni | da confermare | Spagnolo | Video |
+
+I corpi dei testi sono pubblicati nella lingua originale, trascritti dalle pagine del sito originale: master editoriali in `docs/source-texts/`, dati dell'app in `client/src/data/texts/`. Autori, anni e lingue vanno verificati contro le trascrizioni prima della consegna.
 
 Etichette:
 
 - Titolo sezione: Testi
-- Testo introduttivo: Testi critici e note d'autore pubblicati in occasione delle mostre.
+- Testo introduttivo: Testi critici e note d'autore che accompagnano le serie del catalogo.
 - Leggi il testo
+- Serie
 - Lingua originale
 - Traduzione
 - Testo non disponibile in italiano.

@@ -44,7 +44,7 @@ export const home = {
   feature: {
     eyebrow: 'Catalogo',
     title: 'Opere',
-    text: 'Diciassette serie, dal 1994 al 2010. Pittura, disegno, fotografia, incisione e video.',
+    text: 'Diciassette serie e 76 opere, dal 1994 al 2010. Pittura, disegno, fotografia, incisione e video.',
     action: 'Sfoglia il catalogo',
     to: '/opere',
   },
@@ -89,85 +89,8 @@ export const categoryIntros = {
     'Lavori brevi, tra il 1997 e il 2005, in cui il corpo e il paesaggio entrano in movimento.',
 };
 
-// Critical texts index. Language and author values come from
-// docs/content-model.md section 8, where uncertain fields are marked.
-export const texts = [
-  {
-    slug: 'quod-superest',
-    title: 'Quod superest',
-    author: 'Alessandra Piolotto',
-    year: '2009',
-    languages: ['Italiano', 'Español'],
-    bodyPath: '/testi',
-  },
-  {
-    slug: 'ritratti',
-    title: 'Ritratti',
-    author: 'Alicia Murria',
-    year: 'da confermare',
-    languages: ['Spagnolo', 'Inglese'],
-    bodyPath: '/testi',
-  },
-  {
-    slug: 'cuando-llueve-diluvia',
-    title: 'Cuando llueve diluvia',
-    author: 'Aurelio Horta',
-    year: 'da confermare',
-    languages: ['Spagnolo'],
-    bodyPath: '/testi',
-  },
-  {
-    slug: 'dettagli-personali',
-    title: 'Dettagli personali',
-    author: 'da confermare',
-    year: '1996',
-    languages: ['Spagnolo'],
-    bodyPath: '/testi',
-  },
-  {
-    slug: 'il-sole-nell-hangar',
-    title: "Il sole nell'hangar",
-    author: 'Francesca Pasini',
-    year: 'da confermare',
-    languages: ['Italiano'],
-    bodyPath: '/testi',
-  },
-  {
-    slug: 'il-colore-della-luce',
-    title: 'Il colore della luce',
-    author: 'Francesca Pasini',
-    year: 'da confermare',
-    languages: ['Italiano', 'Inglese'],
-    bodyPath: '/testi',
-  },
-  {
-    slug: 'after-man-ray',
-    title: 'After Man Ray',
-    author: 'da confermare',
-    year: 'da confermare',
-    languages: ['Inglese', 'Spagnolo'],
-    bodyPath: '/testi',
-  },
-  {
-    slug: '103-africans',
-    title: '103 africans',
-    author: 'Guido Anderloni',
-    year: '1997',
-    languages: ['Italiano'],
-    bodyPath: '/testi',
-  },
-  {
-    slug: 'video',
-    title: 'Video',
-    author: 'Guido Anderloni',
-    year: 'da confermare',
-    languages: ['Italiano'],
-    bodyPath: '/testi',
-  },
-];
-
-export const textsIntro =
-  "Testi critici e note d'autore pubblicati in occasione delle mostre.";
+// Critical texts index moved to data/texts.js, together with the body copy
+// and the link from each text to the series that published it.
 
 export const contact = {
   title: 'Contatti',
@@ -207,6 +130,10 @@ export const micro = {
   close: 'Chiudi',
   openInNewTab: 'Apri in una nuova scheda',
   readText: 'Leggi il testo',
+  browseAll: 'Sfoglia tutte le opere',
+  browseLabel: 'Galleria di tutte le opere',
+  browsePosition: (current, total) => `${current} di ${total}`,
+  seeSeries: 'Vedi la serie',
   languageOriginal: 'Lingua originale',
   languageTranslation: 'Traduzione',
   noItalianVersion: 'Testo non disponibile in italiano.',

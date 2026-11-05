@@ -48,12 +48,16 @@ Work continues with the assets already scraped. Broken or low quality images are
 
 | ID | Question | Impact |
 | --- | --- | --- |
-| Q17 | Should the critical texts be published in the original language only, or with Italian translations? | Most texts are in Spanish. Italian readers need a translation. |
+| Q17 | Should the critical texts be published in the original language only, or with Italian translations? | Most texts are in Spanish. Italian readers need a translation. Bodies are published in the original language for now, transcriptions in docs/source-texts/. |
 | Q18 | Who wrote the "After Man Ray" and "Personal details" texts? | Both are unsigned. Attribution is required before publishing. |
 | Q19 | In "Personal details" the signature says Madrid, September 1996. Who signed it? | Same reason as Q18. |
 | Q20 | The Italian version of Quod superest attributes a quote to "Robert Filiou", the Spanish to "Robert Liliou". The artist is Robert Filliou. Should we correct the spelling? | Small editorial fix, needs approval. |
 | Q21 | Should the work titles stay in the original language, English and Spanish, or be translated for the Italian site? | Currently the content model keeps originals. Confirm. |
 | Q22 | Do you want a section for texts by yourself, separate from the critics? | Would affect the Testi page structure. |
+| Q37 | The "Cuando llueve diluvia" page holds five signed texts (Molins, Pacheco, Astiasarán, Blanco, Horta), two of which are near identical. Publish all five, and under which attribution? | Currently published as one text page with all five, credit line lists every signature. |
+| Q38 | The "Il colore della luce" text is unsigned and written in first person: is it the artist's own note? And is an Italian version published anywhere? The index used to claim Francesca Pasini and an Italian version that do not exist in the source. | Published as unsigned, in English and Spanish, author marked "da confermare". |
+| Q39 | The "Video" and "103 africans" texts are unsigned first person notes; Video closes with quotes signed Molins, Astiasarán and Horta, 103 africans with one signed Molins. Confirm they are the artist's own texts. | Attributed to Guido Anderloni following the content model; keep or correct. |
+| Q36 | Do the transcriptions hide editorial problems, for example missing passages or unreadable characters, that need the original files? | Transcriptions were rebuilt from the saved pages; anything still marked "da confermare" needs the client. |
 
 ## Data and structure
 
@@ -61,7 +65,7 @@ Work continues with the assets already scraped. Broken or low quality images are
 | --- | --- | --- |
 | Q23 | Should the address be written as "C.na Comperto" or "Cascina Comperto"? | Currently expanded to Cascina. Confirm. |
 | Q24 | Are the years and dimensions on the current site correct? Several entries mix centimetres and inches inconsistently. | Data clean up before migration into MySQL. |
-| Q25 | Should the Quicktour slideshow survive as an automatic carousel, or be dropped in favour of the catalogue? | Affects the home page build. |
+| Q25 | Should the Quicktour slideshow survive as an automatic carousel, or be dropped in favour of the catalogue? | Currently implemented as a manual browse dialog on the catalogue index, "Sfoglia tutte le opere", ordered by series. An automatic home carousel is not built. Confirm. |
 | Q26 | Do you have social profiles, Instagram or similar, to link in the footer? | Small addition, useful for collectors. |
 | Q27 | Is anything missing from the current site that you want in the new one, for example a newsletter or a curated press page? | Scope control. |
 
