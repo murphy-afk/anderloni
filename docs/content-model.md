@@ -66,15 +66,11 @@ Blocco in evidenza verso la sezione Opere:
 
 Titolo: Guido Anderloni
 
-Stato: la biografia ufficiale non è disponibile. I paragrafi qui sotto sono una base provvisoria, costruita solo su elementi verificabili nel sito attuale. Vanno sostituiti con il testo fornito dal cliente. Non inventare anno di nascita, formazione o mostre.
+Stato: biografia ufficiale fornita dal cliente il 2026-11-09, pubblicata come ricevuta. Non contiene anno o luogo di nascita.
 
-Paragrafi:
+Paragrafo:
 
-> Guido Anderloni vive e lavora a Invorio, in provincia di Novara. Lavora in pittura, disegno, fotografia, incisione e video.
-
-> Le opere documentate vanno dal 1994 al 2010. I soggetti ricorrenti sono natura morta, ritratto, interni e installazione.
-
-> Ha esposto, tra gli altri, alla Jacob Karpio Gallery e alla DAB Gallery. Il ciclo Quod superest, presentato nel 2009, è accompagnato da un testo critico di Alessandra Piolotto.
+> Guido Anderloni è un artista visivo formato all’Accademia di Belle Arti di Brera. Dopo esperienze internazionali, ha sviluppato una pratica interdisciplinare che intreccia arte, artigianato e relazione con l’ambiente naturale. Dal 2005 vive a Invorio, dove porta avanti una ricerca che integra produzione artistica, botanica e saperi tradizionali, configurandosi come un sistema di pratiche tra natura, sperimentazione sensoriale e vita quotidiana.
 
 Elenco sintetico a lato:
 

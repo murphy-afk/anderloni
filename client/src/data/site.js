@@ -52,13 +52,10 @@ export const home = {
 
 export const artist = {
   title: "Guido Anderloni",
-  // Provisional paragraphs. Replace when the client sends the official
-  // biography, see QUESTIONS.md Q7. No birth year, training or exhibitions
-  // are invented here.
+  // Official biography provided by the client on 2026-11-09, see
+  // QUESTIONS.md Q7. Published as given.
   paragraphs: [
-    'Guido Anderloni vive e lavora a Invorio, in provincia di Novara. Lavora in pittura, disegno, fotografia, incisione e video.',
-    'Le opere documentate vanno dal 1994 al 2010. I soggetti ricorrenti sono natura morta, ritratto, interni e installazione.',
-    'Ha esposto, tra gli altri, alla Jacob Karpio Gallery e alla DAB Gallery. Il ciclo Quod superest, presentato nel 2009, è accompagnato da un testo critico di Alessandra Piolotto.',
+    'Guido Anderloni è un artista visivo formato all’Accademia di Belle Arti di Brera. Dopo esperienze internazionali, ha sviluppato una pratica interdisciplinare che intreccia arte, artigianato e relazione con l’ambiente naturale. Dal 2005 vive a Invorio, dove porta avanti una ricerca che integra produzione artistica, botanica e saperi tradizionali, configurandosi come un sistema di pratiche tra natura, sperimentazione sensoriale e vita quotidiana.',
   ],
   facts: [
     { label: 'Vive e lavora', value: 'Invorio (NO), Italia' },

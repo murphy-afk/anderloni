@@ -2,7 +2,7 @@ import PageHeader from '../components/PageHeader.jsx';
 import useSeo from '../hooks/useSeo.js';
 import { artist } from '../data/site.js';
 
-// L'artista. The paragraphs are provisional, see QUESTIONS.md Q7.
+// L'artista. Official biography provided by the client, see QUESTIONS.md Q7.
 export default function Artista() {
   useSeo({
     title: `L'artista, ${artist.title}`,

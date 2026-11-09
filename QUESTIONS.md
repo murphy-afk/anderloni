@@ -15,6 +15,7 @@ Status values: open, answered, deferred, dropped.
 | Q3 | Are prices published on the current site? | No. No price, currency, or price request appears on any page. |
 | Q4 | Should prices be shown on the new site? | No. This is a gallery portfolio, not a shop. No price field, no price block, no "su richiesta" label. Confirmed 2026-10-26. |
 | Q5 | Do you have a price list? | Not needed. Question dropped. |
+| Q7 | What is the official biography, including year of birth, place of birth, and training? | Received 2026-11-09 and published on the L'artista page: training at Accademia di Belle Arti di Brera, international experience, interdisciplinary practice, living in Invorio since 2005. No birth year or place given. |
 
 ## Blocking before the front end can ship
 
@@ -39,7 +40,6 @@ Work continues with the assets already scraped. Broken or low quality images are
 
 | ID | Question | Impact |
 | --- | --- | --- |
-| Q7 | What is the official biography, including year of birth, place of birth, and training? | The L'artista page is provisional until this arrives. |
 | Q8 | Is there a complete exhibition list, solo and group, with year, venue, and city? | Needed for a credible Mostre section. The current site names only Jacob Karpio Gallery and DAB Gallery. |
 | Q9 | Is there a catalogue or press review to quote? | Would feed the Testi section and structured data. |
 | Q13 | Which technique should be declared for each work, for example olio su tela, tecnica mista, fotografia? | The current site never states the technique, only the size. |
