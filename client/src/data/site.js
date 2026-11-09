@@ -33,9 +33,9 @@ export const home = {
   heroImage: '/works/full/images_____dab_gen_view_dab02.jpg',
   heroAlt: "Vista dell'allestimento in galleria: le opere esposte sulle pareti",
   lead:
-    "Il lavoro di Guido Anderloni si muove sul confine tra ciò che è vivo e ciò che è morto. Nature morte, insetti, fiori appassiti e oggetti domestici diventano il pretesto per un'indagine paziente sulla trasformazione della materia.",
+    'Guido Anderloni vive e lavora a Invorio, in provincia di Novara. Lavora in pittura, disegno, fotografia, incisione e video.',
   second:
-    'La luce, costruita con la precisione del chiaroscuro, apre uno spazio sospeso tra notte e giorno. Ciò che resta, il residuo, è il vero soggetto dell\'opera.',
+    'I soggetti ricorrenti sono natura morta, insetti, fiori appassiti, ritratto, interni e oggetti domestici.',
   quote: {
     text:
       'La drammaticità mi aiuta a riclassificare quelle componenti più marginali, più effimere, come la muffa, l\'insetto, il fiorellino di campagna che nessuno noterebbe.',
@@ -56,9 +56,8 @@ export const artist = {
   // biography, see QUESTIONS.md Q7. No birth year, training or exhibitions
   // are invented here.
   paragraphs: [
-    'Guido Anderloni vive e lavora a Invorio, in provincia di Novara. La sua ricerca attraversa pittura, disegno, fotografia, incisione e video, con una predilezione costante per la natura morta e per il ritratto.',
-    'Il punto di partenza è quasi sempre un reperto: un insetto coperto di cenere, un fiore che ha perso colore, un oggetto domestico osservato da vicino. Da qui nasce una riflessione sulla caducità e sulla energia che resta nelle cose quando la vita le ha lasciate.',
-    'Il suo linguaggio visivo si collega alla tradizione secentesca della vanitas e alla lezione del chiaroscuro, ma la restituisce con una precisione che appartiene alla fotografia. L\'immagine è insieme documento e messa in scena.',
+    'Guido Anderloni vive e lavora a Invorio, in provincia di Novara. Lavora in pittura, disegno, fotografia, incisione e video.',
+    'Le opere documentate vanno dal 1994 al 2010. I soggetti ricorrenti sono natura morta, ritratto, interni e installazione.',
     'Ha esposto, tra gli altri, alla Jacob Karpio Gallery e alla DAB Gallery. Il ciclo Quod superest, presentato nel 2009, è accompagnato da un testo critico di Alessandra Piolotto.',
   ],
   facts: [
