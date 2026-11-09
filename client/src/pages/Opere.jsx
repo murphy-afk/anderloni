@@ -1,21 +1,18 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader.jsx';
 import useSeo from '../hooks/useSeo.js';
 import { asset } from '../lib/asset.js';
 import useCatalog from '../hooks/useCatalog.js';
-import { categoryIntros, micro } from '../data/site.js';
-
-const ALL = 'Tutte';
+import { micro } from '../data/site.js';
 
 // Preview images per band: one row, no wrapping, enough to span the width.
 const BAND_PREVIEW = 6;
 
-// Catalogue index: category filters plus one band per series, in source
-// order. Counts are series counts, the summary line states the total of
-// works, so the page cannot be read as if the catalogue held only seventeen
-// works. Each band opens the series page, which holds the full grid and the
-// critical text. The browse dialog lives on the Quick tour page.
+// Catalogue index: one band per series, in source order. The summary line
+// states the total of works, so the page cannot be read as if the catalogue
+// held only seventeen works. Each band opens the series page, which holds the
+// full grid and the critical text. The browse dialog lives on the Quick tour
+// page.
 export default function Opere() {
   const series = useCatalog();
   const totalWorks = series.reduce((sum, item) => sum + item.works.length, 0);
@@ -34,11 +31,6 @@ export default function Opere() {
     },
   });
 
-  const categories = [ALL, ...Array.from(new Set(series.map((item) => item.category)))];
-  const [active, setActive] = useState(ALL);
-  const visible = active === ALL ? series : series.filter((item) => item.category === active);
-  const intro = active === ALL ? null : categoryIntros[active];
-
   return (
     <div className="page container">
       <PageHeader
@@ -47,32 +39,11 @@ export default function Opere() {
         intro={`${series.length} serie e ${totalWorks} opere, dal 1994 al 2010.`}
       />
 
-      <div className="filters" role="group" aria-label="Filtra per categoria">
-        {categories.map((category) => {
-          const count =
-            category === ALL ? series.length : series.filter((item) => item.category === category).length;
-          return (
-            <button
-              key={category}
-              type="button"
-              className={`filter${active === category ? ' is-active' : ''}`}
-              aria-pressed={active === category}
-              aria-label={`${category}: ${count} serie`}
-              onClick={() => setActive(category)}>
-              {category}
-              <span className="filter__count">{count}</span>
-            </button>
-          );
-        })}
-      </div>
-
-      {intro ? <p className="series-note">{intro}</p> : null}
-
-      {visible.length === 0 ? (
+      {series.length === 0 ? (
         <p className="series-empty">{micro.empty}</p>
       ) : (
         <div className="series-bands">
-          {visible.map((item, bandIndex) => {
+          {series.map((item, bandIndex) => {
             const preview = item.works
               .filter((work) => work.image || work.thumb)
               .slice(0, BAND_PREVIEW);
