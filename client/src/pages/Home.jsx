@@ -4,7 +4,7 @@ import { asset } from '../lib/asset.js';
 import { home, micro } from '../data/site.js';
 
 const HOME_DESCRIPTION =
-  'Opere, mostre e testi critici di Guido Anderloni, pittore. Nature morte, ritratti e installazioni tra memoria, materia e trasformazione.';
+  'Opere, mostre e testi critici di Guido Anderloni, artista. Nature morte, ritratti e installazioni tra memoria, materia e trasformazione.';
 
 // Home: full bleed hero plate, opening text, artist quote, catalogue teaser.
 export default function Home() {

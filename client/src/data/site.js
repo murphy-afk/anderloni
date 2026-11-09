@@ -3,7 +3,7 @@
 
 export const site = {
   name: 'Guido Anderloni',
-  role: 'Pittore',
+  role: 'Artista',
   locality: 'Invorio (NO), Italia',
   email: 'info@anderloni.com',
   address: 'Cascina Comperto, 28045 Invorio (NO), Italia',
@@ -24,7 +24,7 @@ export const footerLinks = [
 ];
 
 export const home = {
-  eyebrow: 'Pittore',
+  eyebrow: 'Artista',
   title: 'Guido Anderloni',
   subtitle: 'Opere 1994 - 2010',
   // Hero image: an installation view of the exhibition, full width. It is

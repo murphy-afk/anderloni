@@ -7,7 +7,7 @@ Tone: sober, precise, gallery register. No exclamation marks, no marketing super
 ## 1. Site identity
 
 - Site name: Guido Anderloni
-- Short description: Pittore
+- Short description: Artista
 - Locality: Invorio (NO), Italia
 - Email: info@anderloni.com
 - Address: Cascina Comperto, 28045 Invorio (NO), Italia
@@ -16,11 +16,11 @@ Tone: sober, precise, gallery register. No exclamation marks, no marketing super
 ## 2. Metadata
 
 - Title (home): Guido Anderloni, pittura, natura morta e installazioni
-- Description: Opere, mostre e testi critici di Guido Anderloni, pittore. Nature morte, ritratti e installazioni tra memoria, materia e trasformazione.
+- Description: Opere, mostre e testi critici di Guido Anderloni, artista. Nature morte, ritratti e installazioni tra memoria, materia e trasformazione.
 - Title (opera): {Titolo}, {Anno}, Guido Anderloni
 - Title (contatti): Contatti, Guido Anderloni
 - Open Graph image: a full bleed still life plate
-- Structured data: Person with jobTitle Pittore, plus VisualArtwork for each work
+- Structured data: Person with jobTitle Artista, plus VisualArtwork for each work
 
 ## 3. Navigation
 
@@ -38,7 +38,7 @@ Footer links: note legali, privacy, torna su.
 
 Hero:
 
-- Sopratitolo: Pittore
+- Sopratitolo: Artista
 - Titolo: Guido Anderloni
 - Sottotitolo: Opere 1994 - 2010
 - Immagine: una natura morta a fondo scuro, a tutta larghezza
